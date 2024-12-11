@@ -1,5 +1,56 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.svg"
+import profil from "../assets/images/profil.svg"
+import vogn from "../assets/images/vogn.svg"
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+<header x-data="{ showmenu: false }" class="fixed top-0 w-full z-50 bg-colors-blue-500">
+  <div id="navbar" class="flex flex-row items-center justify-between px-xs py-xs md:px-xs md:py-xs">
+    <!-- Logo -->
+    <div class="w-3/12 md:w-2/12">
+        <a href="/">
+            <Image src={logo} alt="logo"/>
+        </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-end">
+      <ul class="flex flex-row gap-lg items-center hover:text-colors-yellow-500">
+        <a href="#" class=" "><li><h5>abonnementer</h5></li></a>
+        <a href="#"><li><h5>om os</h5></li></a>
+        <a href="#"><li><h5>faq</h5></li></a>
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-sm">
+        <ul class="flex items-center md:pl-2xl">
+            <Image src={profil} alt="profilikon"/>
+            <Image src={vogn} alt="indkøbskurv"/>
+        </ul>
+    
+    <!-- Hamburger Menu Button -->
+    <button id="burgermenu" class="lg:hidden w-full" x-on:click="showmenu = !showmenu">
+      <svg x-show="!showmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8 text-colors-green-50">
+        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"></path>
+      </svg>
+      <svg x-show="showmenu" class="w-full" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M6 6L20 20M20 6L6 20" stroke="#F7F8F6" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav id="mobilmenu" class="lg:hidden sticky top-18 left-0 w-full h-screen z-50 pb-20 text-colors-green-50 flex flex-col pt-ml" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click="showmenu = false">
+    <ul class="flex flex-col items-center gap-xs">
+      <li><h5>OPHOLD</h5></li>
+      <li><h5>INFOMØDER</h5></li>
+      <li><h5>OM OS</h5></li>
+      <!-- Register Button in Mobile Menu -->
+      <li class="mt-xs">
+        <!-- <a href="/registrer">Registrer</a> -->
+         
+      </li>
+    </ul>
+  </nav>
+</header>
