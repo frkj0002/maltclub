@@ -1,0 +1,16 @@
+---
+const { url = "#", cardimage = "", cardimagealt = "", navn = "", antal = "", pris = "" } = Astro.props;
+import Link from "./Link.astro";
+import Button from "./Button.astro";
+---
+
+<article class="@container">
+	<a href="#">
+		<section>
+			<h3>{navn}</h3>
+			<p><span> øl om måneden</span><span>{antal}</span></p>
+			<p><span> kr.</span><span>{pris}</span></p>
+			<Button variant="primary" size="small"></Button>
+		</section>
+	</a>
+</article>
