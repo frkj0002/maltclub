@@ -1,0 +1,25 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import hero from "../assets/images/listview_hero.png"
+import Line from "../components/Line.astro";
+---
+<MainLayout>
+    <section class="pt-xl md:pt-5xl grid">
+        <h2 class="text-center mt-lg mb-sm">MaltClub <br>abonnementer</h2>
+        <Image src={hero} alt="en MaltClub ølkasse pakket ud" class="w-full md:w-4/5 md:flex md:justify-self-center"/>
+        <Line/>
+    </section>
+    <section>
+        <h2 class="text-center">Vælg dit ølabonnement</h2>
+        <div class="md:grid md:grid-cols-4">
+            <Card cardimage="/beer_presentation_podium.png" navn="Maltclub XL" antal="9-11" pris="465"/>
+            <Card cardimage="/beer_presentation_podium.png" navn="Maltclub" antal="5-6" pris="275"/>
+            <Card cardimage="/beer_presentation_podium.png" navn="Maltclub uden IPA" antal="5-6" pris="275"/>
+            <Card cardimage="/beer_presentation_podium.png" navn="Gaveabonnement" antal="5-6" pris="275"/>
+        </div>
+    </section>
+</MainLayout>
