@@ -1,0 +1,27 @@
+---
+const { url = "#", cardimage = "", cardimagealt = "", navn = "", type = "", land = "", alkoholprocent = "", beskrivelse = "" } = Astro.props;
+import Link from "./Link.astro";
+import Button from "./Button.astro";
+---
+
+<section class="@container border-small border-colors-blue-400 flex flex-col">
+	<article class="pt-sm text-center relative hover:opacity-0">
+		<div>
+			<h3 class="text-center pb-xs">{navn}</h3>
+			<p class="text-center pb-xxs"><span>TYPE:</span><span>{type}</span></p>
+			<Button variant="secondary" size="small" class="place-content-center">om øllen</Button>
+		</div>
+		<img src={cardimage} alt={cardimagealt} class="object-cover mx-auto w-[300px] md:w-[378px] h-full pt-[25px]" />
+	</article>
+
+	<article class="absolute pt-sm text-center opacity-0 hover:opacity-100 hover:bg-colors-blue-400">
+		<div>
+			<h3 class="text-center pb-xs">{navn}</h3>
+			<p class="text-center pb-s"><span>TYPE:</span><span>{type}</span></p>
+			<p class="text-left pb-xxs pl-m"><span>Land:</span><span>{land}</span></p>
+			<p class="text-left pb-xxs pl-m"><span>Alkoholprocent:</span><span>{alkoholprocent}</span></p>
+			<p class="text-left pl-m">Beskrivelse:</p>
+			<p class="text-left pl-m">{beskrivelse}</p>
+		</div>
+	</article>
+</section>
