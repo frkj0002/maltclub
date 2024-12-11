@@ -42,143 +42,118 @@ export default {
 			"colors-yellow-800": "rgba(150, 169, 4, 1)",
 			"colors-yellow-900": "rgba(75, 85, 2, 1)",
 			"colors-yellow-950": "rgba(35, 40, 1, 1)",
+		},
 
-			// Tokens
-			"backgrounds-header": "var(--colors-blue-500)",
-			"backgrounds-body": "var(--colors-blue-500)",
-			"backgrounds-footer": "var(--colors-blue-600)",
-			"text-p": "var(--colors-green-50)",
-			"text-headers": "var(--colors-green-50)",
-			"buttons-primary-background": "var(--colors-yellow-500)",
-			"buttons-primary-text": "var(--colors-blue-500)",
-			"buttons-primary-stroke-hover": "var(--colors-yellow-500)",
-			"buttons-primary-text-hover": "var(--colors-yellow-500)",
-			"buttons-secondary-text": "var(--colors-yellow-500)",
-			"buttons-tertiary-stroke": "var(--colors-blue-500)",
-			"buttons-tertiary-text": "var(--colors-blue-500)",
-			"buttons-tertiary-background-hover": "var(--colors-blue-500)",
-			"buttons-tertiary-text-hover": "var(--colors-green-500)",
-			"buttons-secondary-stroke": "var(--colors-yellow-500)",
-			"buttons-secondary-background-hover": "var(--colors-yellow-500)",
-			"buttons-secondary-text-hover": "var(--colors-blue-500)",
-			"lines-color": "var(--colors-blue-400)",
-			"form-text": "var(--colors-blue-500)",
-			"form-stroke": "var(--colors-blue-500)",
-			"form-background": "var(--colors-green-500)",
-			accordions: "var(--colors-green-50)",
+		/* Tilføj din egen spacing nedenfor */
+		spacing: {
+			"spacing-xxs": "8px",
+			"spacing-xs": "16px",
+			"spacing-s": "24px",
+			"spacing-sm": "32px",
+			"spacing-m": "40px",
+			"spacing-ml": "48px",
+			"spacing-lg": "64px",
+			"spacing-xl": "80px",
+			"spacing-2xl": "96px",
+			"spacing-3xl": "112px",
+			"spacing-4xl": "128px",
+			"spacing-5xl": "160px",
+			"spacing-6xl": "208px",
+			"spacing-7xl": "320px",
+			"spacing-8xl": "360px",
+			"spacing-9xl": "424px",
+			"border-main": "0.5px",
+			"border-text": "2px",
+		},
+
+		/* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
+		fontFamily: {
+			sans: ["Inter", "sans-serif"],
+		},
+
+		/* Tilføj dit typografiske hierarki herunder */
+		fontSize: {
+			header1mobile: ["4.375rem", { lineHeight: "normal" }],
+			header2mobile: ["2.5rem", { lineHeight: "normal" }],
+			header3mobile: ["1.5625rem", { lineHeight: "normal" }],
+			header4mobile: ["1.3125rem", { lineHeight: "normal" }],
+			header5mobile: ["1.0625rem", { lineHeight: "normal" }],
+			paragraphmobile: ["0.9375rem", { lineHeight: "1.40625rem" }],
+
+			header1: ["8.125rem", { lineHeight: "normal" }],
+			header2: ["3.75rem", { lineHeight: "normal" }],
+			header3: ["1.875rem", { lineHeight: "normal" }],
+			header4: ["1.5625rem", { lineHeight: "normal" }],
+			header5: ["1.25rem", { lineHeight: "normal" }],
+			paragraph: ["1.3125rem", { lineHeight: "2rem" }],
+		},
+
+		/* Tilføj dit fontvægt-hierarki nedenfor */
+		fontWeight: {
+			medium: "500",
+			semibold: "600",
+		},
+
+		/* Borders - borderstørrelser herunder */
+		borderWidth: {
+			small: "1px",
+			large: "2px",
+		},
+
+		extend: {
+			/* Tilføj din egen farvepalette nedenfor */
+			// colors: {
+			//     transparent: 'transparent',
+			//     current: 'currentColor',
+			//     'farvenavn': {
+			//         50: '#hexkode',
+			//         100: '#hexkode',
+			//         200: '#hexkode',
+			//         300: '#hexkode',
+			//         400: '#hexkode',
+			//         500: '#hexkode',
+			//         600: '#hexkode',
+			//         700: '#hexkode',
+			//         800: '#hexkode',
+			//         900: '#hexkode',
+			//     },
+			//     'white': '#fff',
+			//     'black': '#000',
+			// },
+			/* Tilføj din egen spacing nedenfor */
+			// spacing: {
+			//     'm': '40px',
+			// },
+			/* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
+			// fontFamily: {
+			//     sans: ['Prompt', 'sans-serif'],
+			//     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
+			// },
+			/* Tilføj dit typografiske hierarki herunder */
+			// fontSize: {
+			//     base: ['1rem', { lineHeight: '1.5rem' }],
+			//     large: ['2.5rem', { lineHeight: '3.75rem' }],
+			//   },
+			/* Tilføj dit fontvægt-hierarki nedenfor */
+			//   fontWeight: {
+			//     regular: '400',
+			//   },
+			/* Borders - borderstørrelser herunder */
+			// borderWidth: {
+			//     DEFAULT: '1px',
+			//     0: '0px',
+			//     2: '2px',
+			// },
+			/* Border radius størrelser herunder */
+			// borderRadius: {
+			//     DEFAULT: '1.25rem',
+			//     none: '0px',
+			// },
+			/* Box shadows herunder */
+			// boxShadow: {
+			//     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */
+			// },
 		},
 	},
-
-	/* Tilføj din egen spacing nedenfor */
-	spacing: {
-		"spacing-xxs": "8px",
-		"spacing-xs": "16px",
-		"spacing-s": "24px",
-		"spacing-sm": "32px",
-		"spacing-m": "40px",
-		"spacing-ml": "48px",
-		"spacing-lg": "64px",
-		"spacing-xl": "80px",
-		"spacing-2xl": "96px",
-		"spacing-3xl": "112px",
-		"spacing-4xl": "128px",
-		"spacing-5xl": "160px",
-		"spacing-6xl": "208px",
-		"spacing-7xl": "320px",
-		"spacing-8xl": "360px",
-		"spacing-9xl": "424px",
-		"border-main": "0.5px",
-		"border-text": "2px",
-	},
-
-	/* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-	fontFamily: {
-		sans: ["Inter", "sans-serif"],
-	},
-
-	/* Tilføj dit typografiske hierarki herunder */
-	fontSize: {
-		header1mobile: ["4.375rem", { lineHeight: "normal" }],
-		header2mobile: ["2.5rem", { lineHeight: "normal" }],
-		header3mobile: ["1.5625rem", { lineHeight: "normal" }],
-		header4mobile: ["1.3125rem", { lineHeight: "normal" }],
-		header5mobile: ["1.0625rem", { lineHeight: "normal" }],
-		paragraphmobile: ["0.9375rem", { lineHeight: "1.40625rem" }],
-
-		header1: ["8.125rem", { lineHeight: "normal" }],
-		header2: ["3.75rem", { lineHeight: "normal" }],
-		header3: ["1.875rem", { lineHeight: "normal" }],
-		header4: ["1.5625rem", { lineHeight: "normal" }],
-		header5: ["1.25rem", { lineHeight: "normal" }],
-		paragraph: ["1.3125rem", { lineHeight: "2rem" }],
-	},
-
-	/* Tilføj dit fontvægt-hierarki nedenfor */
-	fontWeight: {
-		medium: "500",
-		semibold: "600",
-	},
-
-	/* Borders - borderstørrelser herunder */
-	borderWidth: {
-		small: "1px",
-		large: "2px",
-	},
-
-	extend: {
-		/* Tilføj din egen farvepalette nedenfor */
-		// colors: {
-		//     transparent: 'transparent',
-		//     current: 'currentColor',
-		//     'farvenavn': {
-		//         50: '#hexkode',
-		//         100: '#hexkode',
-		//         200: '#hexkode',
-		//         300: '#hexkode',
-		//         400: '#hexkode',
-		//         500: '#hexkode',
-		//         600: '#hexkode',
-		//         700: '#hexkode',
-		//         800: '#hexkode',
-		//         900: '#hexkode',
-		//     },
-		//     'white': '#fff',
-		//     'black': '#000',
-		// },
-		/* Tilføj din egen spacing nedenfor */
-		// spacing: {
-		//     'm': '40px',
-		// },
-		/* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-		// fontFamily: {
-		//     sans: ['Prompt', 'sans-serif'],
-		//     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-		// },
-		/* Tilføj dit typografiske hierarki herunder */
-		// fontSize: {
-		//     base: ['1rem', { lineHeight: '1.5rem' }],
-		//     large: ['2.5rem', { lineHeight: '3.75rem' }],
-		//   },
-		/* Tilføj dit fontvægt-hierarki nedenfor */
-		//   fontWeight: {
-		//     regular: '400',
-		//   },
-		/* Borders - borderstørrelser herunder */
-		// borderWidth: {
-		//     DEFAULT: '1px',
-		//     0: '0px',
-		//     2: '2px',
-		// },
-		/* Border radius størrelser herunder */
-		// borderRadius: {
-		//     DEFAULT: '1.25rem',
-		//     none: '0px',
-		// },
-		/* Box shadows herunder */
-		// boxShadow: {
-		//     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */
-		// },
-	},
-
 	plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
 };
