@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
+import Smagsglimt from "../components/Smagsglimt.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -18,8 +19,26 @@ import thumbsup from "../assets/images/thumbsup.png";
 		<Button variant="tertiary" size="large">Klik!</Button>
 		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
 		<Image src={thumbsup} alt="" />
-		<div class="grid grid-cols-4">
-		<Card cardimage="/beer_presentation_podium.png" navn="Maltclub XL" antal="9-11" pris="465" />
-		</div>
+
+		<!-- Abonnement sektion -->
+		<section class="text-center">
+			<h2 class="text-center">Abonnementer</h2>
+			<article class="md:grid grid-cols-4 mx-auto px-xxs">
+				<Card cardimage="/beer_presentation_podium.png" navn="Maltclub XL" antal="9-11" pris="465" />
+				<Card cardimage="/beer_presentation_podium.png" navn="Maltclub" antal="5-6" pris="275" />
+				<Card cardimage="/beer_presentation_podium.png" navn="Maltclub uden IPA" antal="5-6" pris="275" />
+				<Card cardimage="/beer_presentation_podium.png" navn="Maltclub gaveabonnement" antal="5-6" pris="275" />
+			</article>
+			<Button variant="primary" size="small">Gå til abonnementoversigt</Button>
+		</section>
+
+		<!-- Tidligere kasser -->
+		<section class="text-center px-s">
+			<h2>Smagsglimt fra tidligere kasser</h2>
+
+			<article>
+				<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" />
+			</article>
+		</section>
 	</article>
 </MainLayout>
