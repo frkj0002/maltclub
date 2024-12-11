@@ -1,6 +1,20 @@
 ---
+const { variant = "", size = "" } = Astro.props;
+
+const buttonStyling = "font-sans text-header4mobile md:text-header4 font-medium text-colors-beige-200 rounded-large shadow-drop4 focus:shadow-none uppercase";
+
+const variantClasses = {
+    "primary": "bg-colors-orange-500 hover:bg-colors-orange-700",
+    "secondary": "bg-colors-blue-500 hover:bg-colors-blue-400"
+};
+
+const sizeClasses = {
+    "small": "py-xxs px-sm",      
+    "large": "py-xxs px-2xl"       
+};
 
 ---
+
 <div>
-    <button class="border-2 border-black"><slot /></button>
+	<button class="border-2 border-black"><slot /></button>
 </div>
