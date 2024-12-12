@@ -1,0 +1,19 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import samuel from "../assets/images/samuel.jpg";
+import Accordion from "../components/Accordion.astro";
+---
+
+<MainLayout>
+     <section class="grid md:grid-cols-2 border-t-small border-b-small border-colors-blue-400">
+        <article class="grid gap-xxs md:border-r-small border-colors-blue-400">
+            <h2 class="">Om os</h2>
+            <p>Hos MaltClub er vi på en mission. Vi vil udbrede kendskabet til god øl fra bryghuse med noget på hjertet. Vi elsker at fortælle den gode historie om både øl og bryghuse fra ind- og udland og er overbeviste om, at dette kan være med til at pirre dine smagsløg. Øl med en god historie smager bedre. Vi sammensætter hver måned en kasse med forskellige typer øl og håber på den måde at kunne medvirke til at udvide din horisont omkring øl. Hver øl akkompagneres med en inspirerende beskrivelse af bryghuset og historien bag den udvalgte øl. Vi glæder os til at levere din næste MaltClub ølpakke!</p>
+        </article>
+        <article class="md:border-r-small border-colors-blue-400 flex justify-center">
+            <Image src={samuel} alt="MaltClub XL ølpakken" class="w-full object-cover"/>
+        </article>
+    </section>
+</MainLayout>

@@ -17,7 +17,7 @@ import vogn from "../assets/images/vogn.svg"
     <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-end">
       <ul class="flex flex-row gap-lg items-center hover:text-colors-yellow-500">
         <a href="/listview" class=" "><li><h5>abonnementer</h5></li></a>
-        <a href="#"><li><h5>om os</h5></li></a>
+        <a href="/om_os"><li><h5>om os</h5></li></a>
         <a href="#"><li><h5>faq</h5></li></a>
       </ul>
     </nav>
@@ -43,9 +43,9 @@ import vogn from "../assets/images/vogn.svg"
   <!-- Mobile Menu -->
   <nav id="mobilmenu" class="lg:hidden sticky top-18 left-0 w-full h-screen z-50 pb-20 text-colors-green-50 flex flex-col pt-ml" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click="showmenu = false">
     <ul class="flex flex-col items-center gap-xs">
-      <li><h5>OPHOLD</h5></li>
-      <li><h5>INFOMØDER</h5></li>
-      <li><h5>OM OS</h5></li>
+      <li><h5>abonnementer</h5></li>
+      <li><h5>om os</h5></li>
+      <li><h5>faq</h5></li>
       <!-- Register Button in Mobile Menu -->
       <li class="mt-xs">
         <!-- <a href="/registrer">Registrer</a> -->
