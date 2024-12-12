@@ -4,8 +4,35 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 ---
 
-<section class="@container border-small border-colors-blue-400 flex flex-col">
-	<article class="pt-sm text-center relative hover:opacity-0">
+<section x-data="{ showOverlay: false }" class="@container flex flex-col relative">
+	<article  class="pt-sm text-center relative border-b-0 border-l-small border-r-small border-t-small md:border-r-xsmall md:border-l-xsmall md:border-b-small border-colors-blue-400 cursor-pointer"  @click="showOverlay = true">
+		<div >
+			<h3 class="text-center pb-xs">{navn}</h3>
+			<p class="text-center pb-xxs"><span>TYPE:</span><span>{type}</span></p>
+			<div class="mt-sm">
+				<Button variant="secondary" size="small" class="place-content-center">om øllen</Button>
+			</div>
+		</div>
+		<img src={cardimage} alt={cardimagealt} class="object-cover mx-auto w-[200px] md:w-[278px] pt-[25px]" />
+	</article>
+
+	<article  x-show="showOverlay" x-transition class="absolute inset-0 pt-sm text-center bg-colors-blue-400 h-full">
+		<div class="px-m">
+			<h3 class="text-center pb-xs">{navn}</h3>
+			<p class="text-center pb-s"><span>TYPE:</span><span>{type}</span></p>
+			<p class="text-left pb-xxs"><span>Land:</span><span>{land}</span></p>
+			<p class="text-left pb-xxs"><span>Alkoholprocent:</span><span>{alkoholprocent}</span></p>
+			<p class="text-left">Beskrivelse:</p>
+			<p class="text-left">{beskrivelse}</p>
+			<div @click="showOverlay = false" class="mt-lg">
+				<Button variant="secondary" size="small">luk</Button>
+			</div>
+		</div>
+	</article>
+</section>
+
+<!-- <section class="@container  flex flex-col">
+	<article class="pt-sm text-center relative hover:opacity-0 border-small border-colors-blue-400">
 		<div>
 			<h3 class="text-center pb-xs">{navn}</h3>
 			<p class="text-center pb-xxs"><span>TYPE:</span><span>{type}</span></p>
@@ -24,4 +51,4 @@ import Button from "./Button.astro";
 			<p class="text-left pl-m">{beskrivelse}</p>
 		</div>
 	</article>
-</section>
+</section> -->
