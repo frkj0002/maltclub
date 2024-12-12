@@ -1,5 +1,5 @@
 ---
-const { url = "#", cardimage = "", cardimagealt = "", navn = "", antal = "", pris = "" } = Astro.props;
+const { url = "#", cardimage = "", cardimagealt = "", navn = "", antal = "", pris = "", cardimagehover = "", cardimagehoveralt = "" } = Astro.props;
 import Link from "./Link.astro";
 import Button from "./Button.astro";
 ---
@@ -12,8 +12,9 @@ import Button from "./Button.astro";
 			<p class="text-center pb-s"><span>{pris}</span><span> kr.</span></p>
 			<Button variant="primary" size="small" class="place-content-center">Abonnér</Button>
 		</section>
-		<section>
-			<img src={cardimage} alt={cardimagealt} class="object-cover mx-auto w-[300px] md:w-[378px] h-full pt-[25px]" />
+		<section class="group relative">
+			<img src={cardimage} alt={cardimagealt} class="object-cover mx-auto w-[300px] md:w-[378px] h-full pt-[25px] transition-opacity duration-200 group-hover:opacity-0" />
+			<img src={cardimagehover} alt={cardimagehoveralt} class="object-cover mx-auto w-[300px] md:w-[378px] h-full pt-[25px] transition-opacity duration-200 opacity-0 group-hover:opacity-100 " />
 		</section>
 	</a>
 </article>
