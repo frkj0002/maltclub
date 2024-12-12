@@ -1,0 +1,27 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import hero from "../assets/images/singleview_hero.png";
+import Line from "../components/Line.astro";
+import Accordion from "../components/Accordion.astro";
+---
+
+<MainLayout>
+    <section class="grid md:grid-cols-2 border-t-small border-colors-blue-400">
+        <h2 class="text-center mb-sm md:hidden">MaltClub XL</h2>
+        <article class="md:border-r-small border-colors-blue-400 flex justify-center">
+            <Image src={hero} alt="MaltClub XL ølpakken" class="w-full md:w-4/5 md:flex md:justify-self-center"/>
+        </article>
+        <article class="grid gap-xxs">
+            <h2 class="hidden md:block">MaltClub XL</h2>
+            <p>9-11 øl om måneden</p>
+            <p>465 kr.</p>
+            <p>Inklusiv moms.</p>
+            <p>Levering beregnes ved betaling.</p>
+            <Button variant="primary" size="small">læg i indkøbskurv</Button>
+            <Accordion titel="SPECIFIKATION" indhold="Få leveret kvalitetsøl fra ind- og udland hver måned for kun 465 kr. pr. måned inkl. fragt. Vi håndplukker et udvalg af gode specialøl til dig hver måned og leverer til nærmeste pakkeshop. Din garanti for lækre smagsoplevelser indenfor øllens verden som også kan være med til at udvide din horisont indenfor øl. Ølkassen består af 9-11 kvalitetsøl, som du højst sandsynligt ikke finder i dit lokale supermarked. Vi sætter en ære i at håndplukke øl til dig, så det passer til både årstiden og højtider. Kassen består af forskellige typer af øl, sat sammen med respekt for håndværket og den gode historie bag øllen."/>
+        </article>
+    </section>
+    <Line/>
+</MainLayout>
