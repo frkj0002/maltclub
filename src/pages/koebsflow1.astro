@@ -1,0 +1,52 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Form from "../components/Form.astro";
+import { Image } from "astro:assets";
+import Line from "../components/Line.astro";
+---
+
+<MainLayout>
+	<!-- Kontaktoplysninger og levering -->
+	<section class="bg-colors-green-500 grid gap-y-xs pt-5xl">
+		<a href="/singleview">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+				<path d="M3.99994 9.99997L3.29294 10.707L2.58594 9.99997L3.29294 9.29297L3.99994 9.99997ZM20.9999 18C20.9999 18.2652 20.8946 18.5195 20.707 18.7071C20.5195 18.8946 20.2652 19 19.9999 19C19.7347 19 19.4804 18.8946 19.2928 18.7071C19.1053 18.5195 18.9999 18.2652 18.9999 18H20.9999ZM8.29294 15.707L3.29294 10.707L4.70694 9.29297L9.70694 14.293L8.29294 15.707ZM3.29294 9.29297L8.29294 4.29297L9.70694 5.70697L4.70694 10.707L3.29294 9.29297ZM3.99994 8.99997H13.9999V11H3.99994V8.99997ZM20.9999 16V18H18.9999V16H20.9999ZM13.9999 8.99997C15.8565 8.99997 17.6369 9.73747 18.9497 11.0502C20.2624 12.363 20.9999 14.1435 20.9999 16H18.9999C18.9999 14.6739 18.4732 13.4021 17.5355 12.4644C16.5978 11.5268 15.326 11 13.9999 11V8.99997Z" fill="black"></path>
+			</svg>
+		</a>
+		<div>Icon</div>
+		<h2 class="text-center text-colors-blue-500">Kontaktoplysninger og levering</h2>
+		<Form titel="E-mail" />
+		<div class="">
+			<input type="checkbox" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50" />
+			<label for="privatlivspolitik">Send mig e-mails med nyheder og tilbud</label>
+			<p>Har du allerede en bruger, så log ind <a href="#" class="underline">her</a></p>
+		</div>
+		<div class="grid md:grid-cols-2 gap-xs">
+			<Form titel="Fornavn" />
+			<Form titel="Efternavn" />
+		</div>
+		<Form titel="Firma (valgfri)" />
+		<Form titel="Adresse" variant="primary" class="relative">
+			<span class="absolute inset-y-0 right-0 flex items-center px-3">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="">
+					<path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.146 15.3707 4.888 14.112C3.63 12.8533 3.00067 11.316 3 9.5C2.99933 7.684 3.62867 6.14667 4.888 4.888C6.14733 3.62933 7.68467 3 9.5 3C11.3153 3 12.853 3.62933 14.113 4.888C15.373 6.14667 16.002 7.684 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8127 13.5627 12.688 12.688C13.5633 11.8133 14.0007 10.7507 14 9.5C13.9993 8.24933 13.562 7.187 12.688 6.313C11.814 5.439 10.7513 5.00133 9.5 5C8.24867 4.99867 7.18633 5.43633 6.313 6.313C5.43967 7.18967 5.002 8.252 5 9.5C4.998 10.748 5.43567 11.8107 6.313 12.688C7.19033 13.5653 8.25267 14.0027 9.5 14Z" fill="bg-colors-yellow-500"></path>
+				</svg>
+			</span>
+		</Form>
+		<Form titel="Lejlihed, etage osv. (valgfri)" />
+		<div class="grid md:grid-cols-2 gap-xs">
+			<Form titel="Postnummer" />
+			<Form titel="By" />
+		</div>
+		<Form titel="Telefon" />
+		<div class="">
+			<input type="checkbox" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50" />
+			<label for="privatlivspolitik">Send mig e-mails med nyheder og tilbud</label>
+			<p>Gem denne information for hurtigere udtjekning næste gang</p>
+		</div>
+		<div class="flex justify-center md:justify-end">
+			<a href="/koebsflow2"><Button variant="long" size="long" class="">Næste</Button></a>
+		</div>
+	</section>
+</MainLayout>
