@@ -76,7 +76,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 		<h2 class="text-center text-colors-blue-500">Kontaktoplysninger og levering</h2>
 		<Form titel="E-mail" />
 		<div class="">
-			<input type="radio" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50" />
+			<input type="checkbox" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50" />
 			<label for="privatlivspolitik">Send mig e-mails med nyheder og tilbud</label>
 			<p>Har du allerede en bruger, så log ind <a href="#" class="underline">her</a></p>
 		</div>
@@ -88,7 +88,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 		<Form titel="Adresse" variant="primary" class="relative">
 			<span class="absolute inset-y-0 right-0 flex items-center px-3">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="">
-					<path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.146 15.3707 4.888 14.112C3.63 12.8533 3.00067 11.316 3 9.5C2.99933 7.684 3.62867 6.14667 4.888 4.888C6.14733 3.62933 7.68467 3 9.5 3C11.3153 3 12.853 3.62933 14.113 4.888C15.373 6.14667 16.002 7.684 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8127 13.5627 12.688 12.688C13.5633 11.8133 14.0007 10.7507 14 9.5C13.9993 8.24933 13.562 7.187 12.688 6.313C11.814 5.439 10.7513 5.00133 9.5 5C8.24867 4.99867 7.18633 5.43633 6.313 6.313C5.43967 7.18967 5.002 8.252 5 9.5C4.998 10.748 5.43567 11.8107 6.313 12.688C7.19033 13.5653 8.25267 14.0027 9.5 14Z" fill="#17292B"></path>
+					<path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.146 15.3707 4.888 14.112C3.63 12.8533 3.00067 11.316 3 9.5C2.99933 7.684 3.62867 6.14667 4.888 4.888C6.14733 3.62933 7.68467 3 9.5 3C11.3153 3 12.853 3.62933 14.113 4.888C15.373 6.14667 16.002 7.684 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8127 13.5627 12.688 12.688C13.5633 11.8133 14.0007 10.7507 14 9.5C13.9993 8.24933 13.562 7.187 12.688 6.313C11.814 5.439 10.7513 5.00133 9.5 5C8.24867 4.99867 7.18633 5.43633 6.313 6.313C5.43967 7.18967 5.002 8.252 5 9.5C4.998 10.748 5.43567 11.8107 6.313 12.688C7.19033 13.5653 8.25267 14.0027 9.5 14Z" fill="bg-colors-yellow-500"></path>
 				</svg>
 			</span>
 		</Form>
@@ -99,7 +99,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 		</div>
 		<Form titel="Telefon" />
 		<div class="">
-			<input type="radio" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50" />
+			<input type="checkbox" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50" />
 			<label for="privatlivspolitik">Send mig e-mails med nyheder og tilbud</label>
 			<p>Gem denne information for hurtigere udtjekning næste gang</p>
 		</div>
@@ -112,7 +112,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 	<section class="bg-colors-green-500">
 		<h2 class="text-center">Betaling</h2>
 		<article class="bg-colors-green-300">
-			<div class="flex flex-row justify-between border-b-small border-b-colors-blue-500">
+			<div class="flex flex-row justify-between border-b-small border-b-colors-blue-500 p-s">
 				<p class="text-colors-blue-500">Kreditkort</p>
 				<!-- div med betalingsikoner -->
 				<div class="flex flex-row gap-x-xs">
@@ -168,7 +168,36 @@ import thumbsup from "../assets/images/thumbsup.png";
 				</div>
 			</div>
 			<!-- Form felter -->
-			<Form titel="Kortnummer" class="bg-colors-green-300" />
+			<div class="grid gap-y-xs pt-xs">
+				<Form titel="Kortnummer" class="" />
+				<div class="grid md:grid-cols-2 gap-y-xs">
+					<Form titel="Udløbsdato (MM/ÅÅ)" class="" />
+					<Form titel="Sikkerhedskode" class="" />
+				</div>
+				<Form titel="Navn på kortet" class="" />
+				<div class="">
+					<input type="checkbox" />
+					<label for="">Brug leveringsadresse som faktureringsadresse</label>
+					<div class="flex justify-center md:justify-end">
+						<Button variant="long" size="long" class="">Betal nu</Button>
+					</div>
+				</div>
+				<hr class="border-colors-blue-500 pt-s" />
+				<div class="underline pb-3xl">
+					<ul class="flex gap-x-s flex-col-2">
+						<li>Refusionspolitik</li>
+						<li>Leveringspolitik</li>
+						<li class="hidden md:block">Politik om beskyttelse af persondata</li>
+					</ul>
+					<ul>
+						<li class="md:hidden">Politik om beskyttelse af persondata</li>
+					</ul>
+					<ul class="flex gap-x-s">
+						<li>Servicevilkår</li>
+						<li>Juridisk meddelelse</li>
+					</ul>
+				</div>
+			</div>
 		</article>
-	</section>
-</MainLayout>
+	</section></MainLayout
+>
