@@ -1,0 +1,17 @@
+---
+const { titel = "", indhold = "" } = Astro.props;
+---
+
+<!-- Klassen group gør det muligt at style child-elementerne baseret på, om details er åbent eller lukket -->
+<details class="group underline text-colors-orange-900 rounded-small shadow-drop4 p-m w-full md:max-w-3xl">
+	<summary class="flex justify-between items-center cursor-pointer">
+		<h4>{titel}</h4>
+		<svg class="transform transition-transform group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+			<line x1="7.26562" x2="7.26562" y2="15" stroke="#F7F8F6"></line>
+			<line y1="7.5" x2="15" y2="7.5" stroke="#F7F8F6"></line>
+		</svg>
+	</summary>
+	<div class="py-m">
+		<p>{indhold}</p>
+	</div>
+</details>
