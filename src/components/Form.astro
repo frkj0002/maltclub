@@ -1,0 +1,12 @@
+---
+const { titel = ""} = Astro.props;
+
+const variantClasses = {
+	primary: "bg-colors-transparent border-small hover:text-colors-yellow-500 hover:border-colors-yellow-500",
+	secondary: "bg-colors-green-300 border-small border-colors-yellow-500 text-colors-yellow-500 hover:bg-colors-yellow-500 hover:text-colors-blue-500",
+};
+---
+
+<form class="">
+	<input type="text" placeholder={titel} class="border-colors-blue-500 bg-transparent text-colors-blue-500 placeholder-colors-blue-500 w-full" />
+</form>
