@@ -3,49 +3,50 @@
 @tailwind utilities;
 
 @layer base {
-	h1 {
-		@apply font-sans;
-		/* @apply text-header1; */
-		font-size: clamp(4.375rem, 7vw, 8.125rem);
-		@apply font-medium;
-		@apply text-colors-green-50;
-	}
-	h2 {
-		@apply font-sans;
-		/* @apply text-header1; */
-		font-size: clamp(2.5rem, 7vw, 3.75rem);
-		@apply font-medium;
-		@apply text-colors-green-50;
-	}
-	h3 {
-		@apply font-sans;
-		/* @apply text-header1; */
-		font-size: clamp(1.5625rem, 3vw, 1.875rem);
-		@apply font-semibold;
-		@apply text-colors-green-50;
-		@apply uppercase;
-	}
-	h4 {
-		@apply font-sans;
-		/* @apply text-header1; */
-		font-size: clamp(1.3125rem, 3vw, 1.5625rem);
-		@apply font-semibold;
-		@apply text-colors-green-50;
-		@apply uppercase;
-	}
-	h5 {
-		@apply font-sans;
-		/* @apply text-header1; */
-		font-size: clamp(1.0625rem, 3vw, 1.25rem);
-		@apply font-semibold;
-		@apply text-colors-green-50;
-		@apply uppercase;
-	}
-	p {
-		@apply font-sans;
-		/* @apply text-header1; */
-		font-size: clamp(0.9375rem, 3vw, 1.3125rem);
-		@apply font-medium;
-		@apply text-colors-green-50;
-	}
+  h1 {
+    @apply font-sans;
+    /* @apply text-header1; */
+    font-size: clamp(4.375rem, 7vw, 8.125rem);
+    @apply font-medium;
+    @apply text-colors-green-50;
+  }
+  h2 {
+    @apply font-sans;
+    /* @apply text-header1; */
+    font-size: clamp(2.5rem, 7vw, 3.75rem);
+    @apply font-medium;
+    @apply text-colors-green-50;
+  }
+  h3 {
+    @apply font-sans;
+    /* @apply text-header1; */
+    font-size: clamp(1.5625rem, 3vw, 1.875rem);
+    @apply font-semibold;
+    @apply text-colors-green-50;
+    @apply uppercase;
+  }
+  h4 {
+    @apply font-sans;
+    /* @apply text-header1; */
+    font-size: clamp(1.3125rem, 3vw, 1.5625rem);
+    @apply font-semibold;
+    @apply text-colors-green-50;
+    @apply uppercase;
+  }
+  h5 {
+    @apply font-sans;
+    /* @apply text-header1; */
+    font-size: clamp(1.0625rem, 3vw, 1.25rem);
+    @apply font-semibold;
+    @apply text-colors-green-50;
+    @apply uppercase;
+  }
+  p {
+    @apply font-sans;
+    /* @apply text-header1; */
+    font-size: clamp(0.9375rem, 3vw, 1.125rem);
+    @apply font-medium;
+    @apply text-colors-green-50;
+    @apply max-w-prose;
+  }
 }
