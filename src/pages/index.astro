@@ -11,50 +11,49 @@ import thumbsup from "../assets/images/thumbsup.png";
 import left from "../assets/images/left.png";
 import right from "../assets/images/right.png";
 import hero from "../assets/images/hero.png";
+import Line from "../components/Line.astro";
 ---
 
 <MainLayout title="Titel">
-	<article>
-		
-		
-		<section class="mouse_move grid grid-cols-2 justify-between pt-4xl">
-			<section>
-				<h1>Index overskrift</h1>
-			</section>
+	<section class="mouse_move grid md:grid-cols-2 justify-between pt-4xl">
+		<section class="text-center grid items-center">
+			<div class="grid">
+			<h1 class="pb-0">MaltClub</h1>
+			<h3 class="lowercase pb-lg"><span class="uppercase">D</span>in månedlige dosis af <br> kvalitetsøl</h3>
+			<Button variant="primary" size="large">Køb abonnement</Button>
+			</div>
+		</section>
 		<section class="mouse_move relative w-full h-screen grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-auto bg-center" style="background-image: url('/hero.png');">
-		
-				<Image src={left} alt="malt og humle" class="mouse absolute col-start-1 left-[10%] top-[15%] translate-y-[-50%]" value="5"/>
-				<Image src={right} alt="malt og humle" class="mouse absolute col-start-2 right-[10%] top-[15%] translate-y-[-50%]" value="-5"/>
-			
+			<Image src={left} alt="malt og humle" class="mouse absolute md:col-start-1 left-[10%] translate-y-[-50%]" value="5" />
+			<Image src={right} alt="malt og humle" class="mouse absolute md:col-start-2 right-[10%] translate-y-[-50%]" value="-5" />
 		</section>
-		</section>
+		<Line class="" />
+	</section>
 
+	<!-- Abonnement sektion -->
+	<section class="text-center">
+		<h2 class="text-center">Abonnementer</h2>
+		<article class="md:grid grid-cols-4 mx-auto px-xxs">
+			<Card cardimage="/beer_presentation_podium.png" navn="Maltclub XL" antal="9-11" pris="465" />
+			<Card cardimage="/beer_presentation_podium.png" navn="Maltclub" antal="5-6" pris="275" />
+			<Card cardimage="/beer_presentation_podium.png" navn="Maltclub uden IPA" antal="5-6" pris="275" />
+			<Card cardimage="/beer_presentation_podium.png" navn="Gaveabonnement" antal="5-6" pris="275" />
+		</article>
+		<Button variant="primary" size="small">Gå til abonnementoversigt</Button>
+	</section>
 
-		<!-- Abonnement sektion -->
-		<section class="text-center">
-			<h2 class="text-center">Abonnementer</h2>
-			<article class="md:grid grid-cols-4 mx-auto px-xxs">
-				<Card cardimage="/beer_presentation_podium.png" navn="Maltclub XL" antal="9-11" pris="465" />
-				<Card cardimage="/beer_presentation_podium.png" navn="Maltclub" antal="5-6" pris="275" />
-				<Card cardimage="/beer_presentation_podium.png" navn="Maltclub uden IPA" antal="5-6" pris="275" />
-				<Card cardimage="/beer_presentation_podium.png" navn="Gaveabonnement" antal="5-6" pris="275" />
-			</article>
-			<Button variant="primary" size="small">Gå til abonnementoversigt</Button>
-		</section>
+	<!-- Tidligere kasser -->
+	<section class="text-center px-s">
+		<h2>Smagsglimt fra tidligere kasser</h2>
 
-		<!-- Tidligere kasser -->
-		<section class="text-center px-s">
-			<h2>Smagsglimt fra tidligere kasser</h2>
-
-			<article class="md:grid md:grid-cols-5">
-				<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
-				<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
-				<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
-				<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
-				<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
-			</article>
-		</section>
-	</article>
+		<article class="md:grid md:grid-cols-5">
+			<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
+			<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
+			<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
+			<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
+			<Smagsglimt cardimage="/daase_placeholder.png" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
+		</article>
+	</section>
 
 	<!-- FAQ -->
 	<section>
@@ -75,14 +74,13 @@ import hero from "../assets/images/hero.png";
 </MainLayout>
 
 <script type="text/javascript">
-	document.addEventListener("mousemove", parallax);
-	function parallax(event){
-		this.querySelectorAll(".mouse").forEach((shift) => {
-			const position = shift.getAttribute("value");
-			const x = (window.innerWidth - event.pageX * position) /90;
-			const y = (window.innerHeight - event.pageY * position) /90;
-			shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-		});
-	}
-
+document.addEventListener("mousemove", parallax);
+function parallax(event) {
+	this.querySelectorAll(".mouse").forEach((shift) => {
+		const position = shift.getAttribute("value");
+		const x = (window.innerWidth - event.pageX * position) / 90;
+		const y = (window.innerHeight - event.pageY * position) / 90;
+		shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+	});
+}
 </script>
