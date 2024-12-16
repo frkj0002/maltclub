@@ -1,0 +1,15 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="bg-colors-green-500 px-sm md:px-6xl py-ml md:py-3xl md:flex justify-between items-center">
+    <article>
+        <h2 class="text-colors-blue-500 text-start py-s">Bliv en del af MaltClub</h2>
+        <h5 class="text-colors-blue-500 normal-case pb-s">Tilmeld dig nyhedsbrevet og spar 20% på din første ølkasse</h5>
+        <p class="text-colors-blue-500 pb-s">Modtag nyheder, tilbud og information om events direkte i din indbakke. Ingen spam - det lover vi! <br>Efter du har tilmeldt dig vores nyhedsbrev modtager du en rabatkode på mail.</p>
+    </article>
+    <form class="grid gap-y-m justify-center">
+        <input type="email" placeholder="INDTAST DIN EMAIL HER" class="placeholder-colors-green-800 bg-transparent border-colors-blue-500 text-header3mobile md:text-header3 border-b-small border-t-transparent border-x-transparent">
+        <Button variant="tertiary" size="large">tilmeld nyhedsbrev</Button>
+    </form>
+</section>
