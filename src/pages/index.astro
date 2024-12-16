@@ -15,19 +15,18 @@ import Line from "../components/Line.astro";
 ---
 
 <MainLayout title="Titel">
-	<section class="mouse_move grid md:grid-cols-2 justify-between pt-4xl">
+	<section class="mouse_move grid md:grid-cols-2 justify-between pt-4xl border-b-small border-colors-blue-400">
 		<section class="text-center grid items-center">
 			<div class="grid">
-			<h1 class="pb-0">MaltClub</h1>
-			<h3 class="lowercase pb-lg"><span class="uppercase">D</span>in månedlige dosis af <br> kvalitetsøl</h3>
-			<Button variant="primary" size="large">Køb abonnement</Button>
+				<h1 class="pb-0">MaltClub</h1>
+				<h3 class="lowercase pb-lg"><span class="uppercase">D</span>in månedlige dosis af <br /> kvalitetsøl</h3>
+				<Button variant="primary" size="large">Køb abonnement</Button>
 			</div>
 		</section>
-		<section class="mouse_move relative w-full h-screen grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-auto bg-center" style="background-image: url('/hero.png');">
+		<section class="mouse_move relative w-full h-screen grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-contain bg-center" style="background-image: url('/hero_forside.png');">
 			<Image src={left} alt="malt og humle" class="mouse absolute md:col-start-1 left-[10%] translate-y-[-50%]" value="5" />
 			<Image src={right} alt="malt og humle" class="mouse absolute md:col-start-2 right-[10%] translate-y-[-50%]" value="-5" />
 		</section>
-		<Line class="" />
 	</section>
 
 	<!-- Abonnement sektion -->
