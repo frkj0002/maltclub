@@ -1,5 +1,5 @@
 ---
-const { url = "#", cardimage = "", cardimagealt = "", navn = "", type = "", land = "", alkoholprocent = "", beskrivelse = "" } = Astro.props;
+const { url = "#", cardimage = "", cardimagealt = "", navn = "", type = "", bryggeri = "", land = "", alkoholprocent = "", beskrivelse = "" } = Astro.props;
 import Link from "./Link.astro";
 import Button from "./Button.astro";
 ---
@@ -7,7 +7,7 @@ import Button from "./Button.astro";
 <section x-data="{ showOverlay: false }" class="@container flex flex-col relative">
 	<article  class="pt-sm text-center relative border-b-0 border-l-small border-r-small border-t-small md:border-r-xsmall md:border-l-xsmall md:border-b-small border-colors-blue-400 cursor-pointer"  @click="showOverlay = true">
 		<div >
-			<h3 class="text-center pb-xs">{navn}</h3>
+			<h3 class="text-center pb-xs px-m">{navn}</h3>
 			<p class="text-center pb-xxs"><span>TYPE:</span><span>{type}</span></p>
 			<div class="mt-sm">
 				<Button variant="secondary" size="small" class="place-content-center">om øllen</Button>
@@ -20,6 +20,7 @@ import Button from "./Button.astro";
 		<div class="px-m">
 			<h3 class="text-center pb-xs">{navn}</h3>
 			<p class="text-center pb-s"><span>TYPE:</span><span>{type}</span></p>
+			<p class="text-left pb-xxs"><span>Bryggeri:</span><span>{bryggeri}</span></p>
 			<p class="text-left pb-xxs"><span>Land:</span><span>{land}</span></p>
 			<p class="text-left pb-xxs"><span>Alkoholprocent:</span><span>{alkoholprocent}</span></p>
 			<p class="text-left">Beskrivelse:</p>
