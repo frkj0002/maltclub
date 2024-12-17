@@ -1,0 +1,19 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import beerHvid from "../assets/images/beer_hvid.svg";
+---
+
+<MainLayout>
+    <section class="bg-colors-green-500 pt-5xl px-sm md:px-7xl pb-5xl md:text-center flex flex-col justify-center gap-s">
+        <h2 class="text-colors-blue-500">Velkommen til MaltClub</h2>
+        <p class="text-colors-blue-500 text-[50px] font-medium font-sans">Ordre nr. 1002023456</p>
+        <h3 class="text-colors-blue-500">Tak for din ordre!</h3>
+        <div class="grid md:justify-center">
+            <p class="text-colors-blue-500">Vi glæder os til at pakke dine næste kvalitetsøl</p>
+        </div>
+        <div class="grid justify-center pt-s">
+            <Image src={beerHvid} alt="stregtegning af to øl der skåler" />
+        </div>
+    </section>
+</MainLayout>
