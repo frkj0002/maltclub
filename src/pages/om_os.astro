@@ -11,18 +11,18 @@ import Newsletter from "../components/Newsletter.astro";
 
 <MainLayout>
      <section class="grid md:grid-cols-2 border-t-small border-b-small border-colors-blue-400">
-        <article class="grid md:border-r-small border-colors-blue-400 px-ml">
-            <h2 class="text-start">Om os</h2>
+        <article class="grid md:border-r-small border-colors-blue-400 px-sm md:px-3xl py-ml gap-sm">
+            <h2 class="text-start self-end">Om os</h2>
             <p>Hos MaltClub er vi på en mission. Vi vil udbrede kendskabet til god øl fra bryghuse med noget på hjertet. Vi elsker at fortælle den gode historie om både øl og bryghuse fra ind- og udland og er overbeviste om, at dette kan være med til at pirre dine smagsløg. Øl med en god historie smager bedre. Vi sammensætter hver måned en kasse med forskellige typer øl og håber på den måde at kunne medvirke til at udvide din horisont omkring øl. Hver øl akkompagneres med en inspirerende beskrivelse af bryghuset og historien bag den udvalgte øl. Vi glæder os til at levere din næste MaltClub ølpakke!</p>
         </article>
         <article class="md:border-r-small border-colors-blue-400 flex justify-center">
-            <Image src={samuel} alt="MaltClub XL ølpakken" class="w-full object-cover"/>
+            <Image src={samuel} alt="MaltClub XL ølpakken" class="w-full object-cover" format="webp"/>
         </article>
     </section>
-    <section>
+    <section id="nyhedsbrevsektion">
         <Newsletter/>
     </section>
-    <section class="px-sm md:px-6xl">
+    <section class="px-sm md:px-6xl py-ml md:py-3xl">
         <h2 class="text-start py-s">Ofte stillede spørgsmål</h2>
 		<article class="grid gap-s md:grid-cols-2 md:gap-x-3xl">
 			<Accordion titel="Hvordan bestiller jeg et maltclub abonnement?" indhold="Du bestiller et MaltClub abonnement lige her" />

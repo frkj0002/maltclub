@@ -3,8 +3,8 @@ import { Image } from "astro:assets";
 import logo from "../assets/images/logo (2).svg";
 ---
 
-<footer class="bg-colors-blue-600">
-	<section class="flex flex-col gap-ml md:flex-row md:justify-between">
+<footer class="bg-colors-blue-600 pt-lg md:pt-4xl">
+	<section class="flex flex-col gap-ml md:flex-row md:justify-between px-m md:px-3xl">
 		<article>
 			<h5>© 2024, MaltClub</h5>
 			<p>Din månedlige leverandør af kvalitetsøl</p>
@@ -13,21 +13,22 @@ import logo from "../assets/images/logo (2).svg";
 		</article>
 		<article>
 			<h5>Kontakt</h5>
-			<a href="#"><p>Om os</p></a>
+			<a href="/om_os" class="hover:underline decoration-colors-green-50"><p>Om os</p></a>
 			<p>Telefon: 25766299</p>
-			<p>Mail: <br />info.maltclub@gmail.com</p>
+			<a href="#" class="hover:underline decoration-colors-green-50"><p>Mail: <br />info.maltclub@gmail.com</p></a>
 		</article>
 		<article>
 			<h5>Følg os</h5>
-			<a href="https://www.instagram.com/maltclub.dk/"><p>Instagram</p></a>
-			<a href="https://www.facebook.com/MaltClub.dk"><p>Facebook</p></a>
+			<a href="https://www.instagram.com/maltclub.dk/" class="hover:underline decoration-colors-green-50"><p>Instagram</p></a>
+			<a href="https://www.facebook.com/MaltClub.dk" class="hover:underline decoration-colors-green-50"><p>Facebook</p></a>
+			<a href="/om_os#nyhedsbrevsektion" class="hover:underline decoration-colors-green-50"><p>Nyhedsbrev</p></a>
 		</article>
 		<article>
 			<h5>Betingelser</h5>
-			<p>Handelsbetingelser</p>
-			<p>Cookie- og privatlivspolitik</p>
-			<p>Persondatapolitik</p>
-			<p>Servicevilkår</p>
+			<a href="#" class="hover:underline decoration-colors-green-50"><p>Handelsbetingelser</p></a>
+			<a href="#" class="hover:underline decoration-colors-green-50"><p>Persondatapolitik</p></a>
+			<a href="#" class="hover:underline decoration-colors-green-50"><p>Cookie- og privatlivspolitik</p></a>
+			<a href="#" class="hover:underline decoration-colors-green-50"><p>Servicevilkår</p></a>
 		</article>
 	</section>
 	<section>
