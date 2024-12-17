@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.svg"
 import profil from "../assets/images/profil.svg"
 import vogn from "../assets/images/vogn.svg"
 ---
-<header x-data="{ showmenu: false }" class="w-full h-3xl bg-colors-blue-500">
+<header x-data="{ showmenu: false }" class="w-full h-lg md:h-3xl bg-colors-blue-500">
   <div id="navbar" class="fixed top-0 z-50 flex flex-row items-center justify-between px-xs py-xs md:px-xs md:py-xs bg-colors-blue-500">
     <!-- Logo -->
     <div class="w-3/12 md:w-2/12">
@@ -14,11 +14,11 @@ import vogn from "../assets/images/vogn.svg"
     </div>
 
     <!-- Desktop Menu -->
-    <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-end">
-      <ul class="flex flex-row gap-lg items-center hover:text-colors-yellow-500">
-        <a href="/listview" class=" "><li><h5>abonnementer</h5></li></a>
-        <a href="/om_os"><li><h5>om os</h5></li></a>
-        <a href="#"><li><h5>faq</h5></li></a>
+    <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-end" x-data="{ currentPath: window.location.pathname + window.location.hash }"> 
+      <ul class="flex flex-row gap-lg items-center">
+        <a href="/listview" class="hover:underline hover:decoration-colors-green-50" :class="{ 'underline decoration-colors-green-50': currentPath === '/listview' }"><li><h5>abonnementer</h5></li></a>
+        <a href="/om_os" class="hover:underline hover:decoration-colors-green-50" :class="{ 'underline decoration-colors-green-50': currentPath === '/om_os' }"><li><h5>om os</h5></li></a>
+        <a href="/om_os#faq" class="hover:underline hover:decoration-colors-green-50 active:underline" :class="{ 'underline decoration-colors-green-50': currentPath === '/om_os#faq' }"><li><h5>faq</h5></li></a>
       </ul>
     </nav>
 
@@ -29,7 +29,7 @@ import vogn from "../assets/images/vogn.svg"
         </ul>
     
     <!-- Hamburger Menu Button -->
-    <button id="burgermenu" class="lg:hidden w-full" x-on:click="showmenu = !showmenu">
+    <button id="burgermenu" class="lg:hidden w-full z-50" x-on:click="showmenu = !showmenu">
       <svg x-show="!showmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8 text-colors-green-50">
         <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"></path>
       </svg>
@@ -41,16 +41,12 @@ import vogn from "../assets/images/vogn.svg"
   </div>
 
   <!-- Mobile Menu -->
-  <nav id="mobilmenu" class="lg:hidden sticky top-18 left-0 w-full h-screen z-50 pb-20 text-colors-green-50 flex flex-col pt-ml" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click="showmenu = false">
+  <nav id="mobilmenu" class="lg:hidden sticky top-18 left-0 w-full h-screen z-40 pb-20 text-colors-green-50 bg-colors-blue-500 flex flex-col pt-3xl" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click="showmenu = false">
     <ul class="flex flex-col items-center gap-xs">
-      <li><h5>abonnementer</h5></li>
-      <li><h5>om os</h5></li>
-      <li><h5>faq</h5></li>
+      <a href="/listview"><li><h5>abonnementer</h5></li></a>
+      <a href="/om_os"><li><h5>om os</h5></li></a>
+      <a href="/om_os#faq"><li><h5>faq</h5></li></a>
       <!-- Register Button in Mobile Menu -->
-      <li class="mt-xs">
-        <!-- <a href="/registrer">Registrer</a> -->
-         
-      </li>
     </ul>
   </nav>
 </header>
