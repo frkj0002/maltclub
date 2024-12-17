@@ -10,11 +10,11 @@ import Button from "./Button.astro";
 			<h3 class="text-center pb-xs">{navn}</h3>
 			<p class="text-center pb-xxs"><span>{antal}</span><span> øl om måneden</span></p>
 			<p class="text-center pb-s"><span>{pris}</span><span> kr.</span></p>
-			<a href="/koebsflow1"><Button variant="primary" size="small" class="place-content-center">Abonnér</Button></a>
+			<a href="/koebsflow1"><Button variant="primary" size="small" class="place-content-center py-ml">Abonnér</Button></a>
 		</section>
-		<section class="group relative">
-			<img src={cardimage} alt={cardimagealt} class="object-cover mx-auto w-[300px] md:w-[378px] h-full pt-[25px] transition-opacity duration-200 group-hover:opacity-0" />
-			<img src={cardimagehover} alt={cardimagehoveralt} class="object-cover mx-auto w-[300px] md:w-[378px] h-full pt-[25px] transition-opacity duration-200 opacity-0 group-hover:opacity-100 " />
+		<section class="group relative mx-auto aspect-[7/7]">
+			<img src={cardimage} alt={cardimagealt} class="absolute inset-0 object-cover w-full h-full px-sm transition-opacity duration-200 group-hover:opacity-0" />
+			<img src={cardimagehover} alt={cardimagehoveralt} class="absolute inset-0 object-cover w-full h-full px-s transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
 		</section>
 	</a>
 </article>

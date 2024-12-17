@@ -5,23 +5,40 @@ import { Image } from "astro:assets";
 import hero from "../assets/images/singleview_hero.png";
 import Line from "../components/Line.astro";
 import Accordion from "../components/Accordion.astro";
+import left from "../assets/images/left.png";
+import right from "../assets/images/right.png";
 ---
 
 <MainLayout>
-    <section class="grid md:grid-cols-2 border-t-small border-colors-blue-400">
-        <h2 class="text-center mb-sm md:hidden">MaltClub XL</h2>
-        <article class="md:border-r-small border-colors-blue-400 flex justify-center">
-            <Image src={hero} alt="MaltClub XL ølpakken" class="w-full md:w-4/5 md:flex md:justify-self-center"/>
-        </article>
-        <article class="grid gap-xxs">
-            <h2 class="hidden md:block">MaltClub XL</h2>
-            <p>9-11 øl om måneden</p>
-            <p>465 kr.</p>
-            <p>Inklusiv moms.</p>
-            <p>Levering beregnes ved betaling.</p>
-            <Button variant="primary" size="small">læg i indkøbskurv</Button>
-            <Accordion titel="SPECIFIKATION" indhold="Få leveret kvalitetsøl fra ind- og udland hver måned for kun 465 kr. pr. måned inkl. fragt. Vi håndplukker et udvalg af gode specialøl til dig hver måned og leverer til nærmeste pakkeshop. Din garanti for lækre smagsoplevelser indenfor øllens verden som også kan være med til at udvide din horisont indenfor øl. Ølkassen består af 9-11 kvalitetsøl, som du højst sandsynligt ikke finder i dit lokale supermarked. Vi sætter en ære i at håndplukke øl til dig, så det passer til både årstiden og højtider. Kassen består af forskellige typer af øl, sat sammen med respekt for håndværket og den gode historie bag øllen."/>
-        </article>
-    </section>
-    <Line/>
+	<section class="grid md:grid-cols-2 border-t-small border-colors-blue-400">
+		<h2 class="text-center pt-s md:hidden">MaltClub XL</h2>
+		<article class="md:mouse_move relative w-full min-h-[60vh] grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-contain bg-center border-b-small border-colors-blue-400 pb-0" style="background-image: url('/MaltClubXL_beers.png');">
+			<Image src={left} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-1 left-[10%] translate-y-[-10%]" value="5" />
+			<Image src={right} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-2 right-[10%] translate-y-[-10%]" value="-5" />
+		</article>
+		<article class="grid gap-xxs mx-auto py-lg md:mx-xs pt-0 md:px-lg md:py-6xl md:border-l-small border-colors-blue-400 justify-center">
+			<h2 class="hidden md:block">MaltClub XL</h2>
+			<p>9-11 øl om måneden</p>
+			<p class="pb-s">465 kr.</p>
+			<p>Inklusiv moms.</p>
+			<p class="pb-s">Levering beregnes ved betaling.</p>
+			<div class="pb-s">
+				<Button variant="primary" size="small">læg i indkøbskurv</Button>
+			</div>
+			<Accordion titel="SPECIFIKATION" indhold="Få leveret kvalitetsøl fra ind- og udland hver måned for kun 465 kr. pr. måned inkl. fragt. Vi håndplukker et udvalg af gode specialøl til dig hver måned og leverer til nærmeste pakkeshop. Din garanti for lækre smagsoplevelser indenfor øllens verden som også kan være med til at udvide din horisont indenfor øl. Ølkassen består af 9-11 kvalitetsøl, som du højst sandsynligt ikke finder i dit lokale supermarked. Vi sætter en ære i at håndplukke øl til dig, så det passer til både årstiden og højtider. Kassen består af forskellige typer af øl, sat sammen med respekt for håndværket og den gode historie bag øllen." />
+		</article>
+	</section>
+	<Line />
 </MainLayout>
+
+<script type="text/javascript">
+document.addEventListener("mousemove", parallax);
+function parallax(event) {
+    this.querySelectorAll(".mouse").forEach((shift) => {
+        const position = shift.getAttribute("value");
+        const x = (window.innerWidth - event.pageX * position) / 90;
+        const y = (window.innerHeight - event.pageY * position) / 90;
+        shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    });
+}
+</script>
