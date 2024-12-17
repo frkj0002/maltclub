@@ -6,16 +6,22 @@ import Smagsglimt from "../components/Smagsglimt.astro";
 import Link from "../components/Link.astro";
 import Form from "../components/Form.astro";
 import Accordion from "../components/Accordion.astro";
+import Newsletter from "../components/Newsletter.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import left from "../assets/images/left.png";
 import right from "../assets/images/right.png";
+import pcBlue from "../assets/images/pc_blue.svg";
+import pakkeBlue from "../assets/images/pakke_blue.svg";
+import beerBlue from "../assets/images/beer_blue.svg";
+import yellowArrow from "../assets/images/yellow_arrow.svg";
+import hygge from "../assets/images/hygge.webp";
 import hero from "../assets/images/hero.png";
 import Line from "../components/Line.astro";
 ---
 
 <MainLayout title="Titel">
-	<section class="mouse_move grid md:grid-cols-2 justify-between border-b-small border-colors-blue-400">
+	<section class="relative mouse_move grid md:grid-cols-2 justify-between border-b-small border-colors-blue-400">
 		<section class="text-center grid items-center justify-center w-screen md:w-auto">
 			<div class="grid mx-auto text-center">
 				<h1 class="pb-0">MaltClub</h1>
@@ -27,23 +33,64 @@ import Line from "../components/Line.astro";
 			<Image src={left} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-1 left-[10%] translate-y-[-50%]" value="5" />
 			<Image src={right} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-2 right-[10%] translate-y-[-50%]" value="-5" />
 		</section>
+		<Image src={yellowArrow} alt="pil ned" class="absolute bottom-xs left-1/2 translate-x-[-50%] z-10 shake-vertical" />
+	</section>
+
+	<!-- Hvad er MaltClub -->
+	<section class="pt-3xl">
+		<article class="flex flex-col justify-center items-center">
+			<h2 class="pb-sm">Hvad er MaltClub</h2>
+			<p class="pb-3xl">MaltClub er for dig, der elsker øl med karakter og historie. Hver måned sammensætter vi en kasse med nøje udvalgte specialøl fra danske og udenlandske bryggerier, alle ledsaget af inspirerende fortællinger om bryghusene bag. Vi leverer direkte til din dør eller pakkeshop, så du kan udforske nye smagsoplevelser og dele dem med venner og familie. Fra kun 275 kr. om måneden får du kvalitetsøl, der udvider din ølhorisont - én kasse ad gangen.</p>
+			<h3 class="pb-xl">Din ølrejse starter her</h3>
+		</article>
+
+		<section class="md:flex items-center justify-center gap-lg">
+			<article class="flex flex-col items-center pb-sm">
+				<Image src={pcBlue} alt="stregtegning af computer" class="w-auto h-auto" />
+				<h4>Bestil</h4>
+				<p class="text-center">Vælg det øl-abonnement der <br /> passer bedst til dig.</p>
+			</article>
+			<article class="flex flex-col items-center pb-sm">
+				<Image src={pakkeBlue} alt="stregtegning af pakke" />
+				<h4 class="pt-s">Modtag</h4>
+				<p class="text-center">Læn dig tilbage og glæd dig til at <br /> modtage din ølpakke.</p>
+			</article>
+			<article class="flex flex-col items-center pb-sm">
+				<Image src={beerBlue} alt="stregtegning af to øl der skåler" />
+				<h4 class="pt-s">Nyd</h4>
+				<p class="text-center">Nyd dine kvalitetsøl i godt <br /> selskab.</p>
+			</article>
+		</section>
+		<div class="flex justify-center pt-2xl pb-6xl">
+			<Button variant="secondary" size="small">Mere om os</Button>
+		</div>
+	</section>
+
+	<!-- Øl er lig med hygge -->
+	<section class="grid md:grid-cols-2 border-small border-colors-blue-400 mb-6xl">
+		<Image src={hygge} alt="hej" class="border-r-small border-colors-blue-400" />
+		<article class="flex flex-col px-sm md:px-3xl justify-center md:py-0 py-ml">
+			<h3 class="pb-xxs">øl er lig med hygge</h3>
+			<p class="italic pb-sm">Del smagsoplevelsen med dem du holder af</p>
+			<p>Saml vennerne, og gør øl til noget særligt! Med vores ølpakker handler det ikke bare om at nyde kvalitetsøl, men om at skabe stunder, der bringer jer tættere sammen. Hver måned modtager I en unik samling af håndplukkede specialøl – perfekte til hyggelige aftener fyldt med grin, gode samtaler og fælles smagsoplevelser. Lad ølpakkerne blive en månedlig tradition, hvor fællesskab og hygge er i centrum.</p>
+		</article>
 	</section>
 
 	<!-- Abonnement sektion -->
-	<section class="text-center">
-		<h2 class="text-center">Abonnementer</h2>
-		<article class="md:grid grid-cols-4 mx-auto px-xxs">
+	<section class="text-center pb-6xl">
+		<h2 class="text-center pb-sm">Abonnementer</h2>
+		<article class="md:grid grid-cols-4 mx-auto px-xxs pb-xl">
 			<Card cardimage="/beer_presentation_maisel2.png" cardimagehover="/MaltClubXL_beers.png" navn="Maltclub XL" antal="9-11" pris="465" />
 			<Card cardimage="/beer_presentation_enommer2.png" cardimagehover="/MaltClub_beers.png" navn="Maltclub" antal="5-6" pris="275" />
 			<Card cardimage="/beer_presentation_ebeltoft2.png" cardimagehover="/MaltClub_beers.png" navn="Maltclub uden IPA" antal="5-6" pris="275" />
-			<Card cardimage="/beer_presentation_rochefort2.png" cardimagehover="/MaltClub_beers.png" navn="Gaveabonnement" antal="5-6" pris="275" />
+			<Card cardimage="/beer_presentation_rochefort2.png" cardimagehover="/gave.png" navn="Gaveabonnement" antal="5-6" pris="275" />
 		</article>
-		<Button variant="primary" size="small">Gå til abonnementoversigt</Button>
+		<Button variant="primary" size="large">Gå til abonnementoversigt</Button>
 	</section>
 
 	<!-- Tidligere kasser -->
-	<section class="text-center px-s">
-		<h2>Smagsglimt fra tidligere kasser</h2>
+	<section class="text-center px-s pb-6xl">
+		<h2 class="pb-sm">Smagsglimt fra tidligere kasser</h2>
 
 		<article class="md:grid md:grid-cols-5">
 			<Smagsglimt cardimage="/mikeller.png" cardimagealt="christmas classic fra mikeller" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" bryggeri=" Mikeller" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
@@ -54,21 +101,23 @@ import Line from "../components/Line.astro";
 		</article>
 	</section>
 
-	<!-- FAQ -->
+	<!-- Nyhedsbrev -->
+	<section class="pb-6xl">
+		<Newsletter />
+	</section>
+
+	<!-- Gave sektion -->
 	<section>
-		<h2 class="text-center">Ofte stillede spørgsmål</h2>
-		<article class="px-s grid gap-s md:grid-cols-2 md:gap-x-3xl">
-			<Accordion titel="Hvordan bestiller jeg et maltclub abonnement?" indhold="Du bestiller et MaltClub abonnement lige her" />
-			<Accordion titel="Hvor lang tid binder jeg mig?" indhold="Vi har ingenbinding hos MaltClub, og du kan til enhver tid opsige dit abonnement. Vær dog opmærksom på at dit abonnement skal opsiges senest den 20. i måneden for at være gældende fra den efterfølgende måned." />
-			<Accordion titel="Hvor meget koster et MaltClub abonnement?" indhold="Et MaltClub abonnement med levering hver måned koster fra 275 kr. pr. md. inkl. fragt. Du kan få 20% i rabat på den første måned ved tilmelding til vores nyhedsbrev." />
-			<Accordion titel="Hvordan kan jeg betale på MaltClub?" indhold="På MaltClub.dk kan du betale med Dankort, Visakort og Masterkort, når du opretter et abonnement. Betaling med debet-eller kreditkort er gebyrfrit (dog kan der forekomme gebyr på betaling med firmakort)." />
-			<Accordion titel="Hvornår hæver i pengene på min konto?" indhold="Når du køber et MaltClub abonnement hæver vi pengene den dag du foretager dit køb. Der vil derfor ikke blive trukket penge den førstkommende måned, men først den efterfølgende måned. Eksempel: Du køber et abonnement d. 5. september og pengene trækkes samme dag. Du modtager din MaltClub kasse den første uge i oktober. Næste betaling er d. 1. november." />
-			<Accordion titel="Hvordan ændrer jeg mit betalingskort" indhold="Du får helt automatisk en mail fra vores abonnementsystem, når dit kort er ved at udløbe. Så kan du sagtens nå at skifte kortet inden vi skal trække pengene for abonnementet." />
-			<Accordion titel="Hvordan opsiger jeg mit abonnement?" indhold="Ønsker du at opsige dit abonnement bedes du kontakte os på info.maltclub@gmail.com eller via vores kontaktformular her. Du modtager herefter en skriftlig bekræftelse på din opsigelse." />
-			<Accordion titel="Hvordan ændrer jeg leveringsadresse?" indhold="Hvis du ønsker at ændre leveringsadresse bedes du kontakte os på info.maltclub@gmail.com eller via vores kontaktformular her. Du modtager herefter en skriftlig bekræftelse på din ændring. " />
-			<Accordion titel="Hvad er der i min kommende ølpakke?" indhold="Det må du vente i spænding på at finde ud af. Ølpakkerne varierer fra måned til måned og er dermed aldrig ens. Vi bestræber os derudover på at pakkerne ikke indeholder øl, som tidligere har været med i pakkerne. Du finder med stor sandsynlighed heller ikke nogle af øllene i dit lokale supermarked " />
-			<Accordion titel="Kan jeg selv vælge hvilke øl der er i min ølpakke?" indhold="Nej det kan du ikke. Vi udvælger alle øl i dit MaltClub abonnement fra måned til måned for dig." />
-		</article>
+		<section class="grid md:grid-cols-2 border-small border-colors-blue-400">
+			<img src="/gave.png" alt="gave" class="border-r-small border-colors-blue-400" />
+			<article class="flex flex-col px-sm md:px-2xl justify-center md:py-0 py-ml">
+				<h3 class="pb-xxs">Den perfekte gave til ølelskeren</h3>
+				<p class="pb-lg">Overrask ølelskeren i dit liv med et gaveabonnement på vores ølkasser. Du bestemmer selv, hvor mange måneder modtageren skal forkæles med spændende, håndplukkede øl. Når perioden er slut, stopper abonnementet automatisk, så det er en gave uden besvær. Med MaltClub får modtageren ikke bare øl - de får en oplevelse, en smagsrejse og noget at glæde sig til hver måned. Ingen binding, ingen bekymringer - bare ren øl-lykke!</p>
+				<div class="">
+					<Button variant="long" size="long" class="">køb nu</Button>
+				</div>
+			</article>
+		</section>
 	</section>
 </MainLayout>
 
