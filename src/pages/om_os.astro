@@ -41,13 +41,13 @@ import Newsletter from "../components/Newsletter.astro";
         <h2 class="text-colors-blue-500 text-start py-s">Kontakt MaltClub</h2>
         <p class="text-colors-blue-500">Udfyld kontaktformularen nedenfor, så vender vi hurtigst muligt tilbage.</p>
         <p class="text-colors-blue-500">Du skal også være meget velkommen til at ringe, hvis du har spørgsmål. <br>Fang os på +45 2576 6299</p>
-        <form class="pt-sm pb-sm" netlify>
+        <form class="pt-sm pb-sm" data-netlify="true">
             <article class="grid gap-xs">
                 <div class="grid md:grid-cols-2 gap-xs">
-                    <Form titel="Navn"/>
-                    <Form titel="E-mail"/>
+                    <Form titel="Navn" name="navn kontakt form"/>
+                    <Form titel="E-mail" name="email kontakt form"/>
                 </div>
-                <Form titel="Telefonnummer"/>
+                <Form titel="Telefonnummer" name="telefon kontakt form"/>
                 <textarea name="besked" id="besked" placeholder="Besked" class="border-colors-blue-500 bg-transparent text-colors-blue-500 placeholder-colors-blue-500 w-full h-4xl md:h-6xl"></textarea>
                 <div class="flex justify-end">
                     <Button variant="tertiary" size="small" >send</Button>

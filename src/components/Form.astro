@@ -1,5 +1,5 @@
 ---
-const { titel = "", name = "", value = ""} = Astro.props;
+const { titel = "", name = ""} = Astro.props;
 
 const variantClasses = {
 	primary: "bg-colors-transparent border-small hover:text-colors-yellow-500 hover:border-colors-yellow-500",
@@ -8,5 +8,5 @@ const variantClasses = {
 ---
 
 <form class="" name={name} data-netlify="true">
-	<input type="text" value={value} placeholder={titel} class="border-colors-blue-500 bg-transparent text-colors-blue-500 placeholder-colors-blue-500 w-full" />
+	<input type="text" placeholder={titel} class="border-colors-blue-500 bg-transparent text-colors-blue-500 placeholder-colors-blue-500 w-full" />
 </form>

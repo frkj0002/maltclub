@@ -75,18 +75,20 @@ import pakkeHvid from "../assets/images/pakke_hvid.svg";
 			<!-- Form felter -->
 			<div class="grid md:p-s">
 				<div class="p-xs">
-					<Form titel="Kortnummer" class="" />
+					<Form titel="Kortnummer" name="kortnummer" class="" />
 				</div>
 				<div class="grid md:grid-cols-2 gap-y-xs md:gap-xs px-xs">
-					<Form titel="Udløbsdato (MM/ÅÅ)" class="" />
-					<Form titel="Sikkerhedskode" class="" />
+					<Form titel="Udløbsdato (MM/ÅÅ)" name="udløbsdato" class="" />
+					<Form titel="Sikkerhedskode" name="sikkerhedskode" class="" />
 				</div>
 				<div class="p-xs">
-					<Form titel="Navn på kortet" class="" />
+					<Form titel="Navn på kortet" name="navn på kortet" class="" />
 				</div>
 				<div class="px-xs">
-					<input type="checkbox" />
-					<label for="">Brug leveringsadresse som faktureringsadresse</label>
+					<form data-netlify="true">
+						<input type="checkbox" name="brug leveringsadresse" />
+						<label for="">Brug leveringsadresse som faktureringsadresse</label>
+					</form>
 					<div class="md:flex justify-center md:justify-between grid gap-y-sm py-sm">
 						<div class="md:order-last">
 							<a href="/koebsflow3"><Button variant="long" size="long" class="">Betal nu</Button></a>
