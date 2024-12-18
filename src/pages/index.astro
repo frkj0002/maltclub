@@ -37,7 +37,7 @@ import Line from "../components/Line.astro";
 	</section>
 
 	<!-- Hvad er MaltClub -->
-	<section class="pt-3xl">
+	<section class="pt-3xl maltclub">
 		<article class="flex flex-col items-center">
 			<div class="w-full max-w-3xl px-s md:px-0">
 				<h2 class="pb-sm text-left">Hvad er MaltClub</h2>
@@ -69,7 +69,7 @@ import Line from "../components/Line.astro";
 	</section>
 
 	<!-- Øl er lig med hygge -->
-	<section class="grid md:grid-cols-2 border-small border-colors-blue-400 mb-6xl">
+	<section class="grid md:grid-cols-2 border-small border-colors-blue-400 mb-6xl hygge">
 		<Image src={hygge} alt="hej" class="border-r-small border-colors-blue-400" />
 		<article class="flex flex-col px-sm md:px-3xl justify-center md:py-0 py-ml">
 			<h3 class="pb-xxs">øl er lig med hygge</h3>
@@ -79,7 +79,7 @@ import Line from "../components/Line.astro";
 	</section>
 
 	<!-- Abonnement sektion -->
-	<section class="text-center pb-6xl">
+	<section class="text-center pb-6xl abonnement">
 		<h2 class="text-center pb-sm">Abonnementer</h2>
 		<article class="md:grid grid-cols-4 mx-auto px-xxs pb-xl">
 			<Card cardimage="/beer_presentation_maisel2.png" cardimagehover="/MaltClubXL_beers.png" navn="Maltclub XL" antal="9-11" pris="465" bestseller="true" />
@@ -91,7 +91,7 @@ import Line from "../components/Line.astro";
 	</section>
 
 	<!-- Tidligere kasser -->
-	<section class="text-center px-s pb-6xl">
+	<section class="text-center px-s pb-6xl tidligere">
 		<h2 class="pb-sm">Smagsglimt fra tidligere kasser</h2>
 
 		<article class="md:grid md:grid-cols-5 border-b-small border-colors-blue-400 md:border-none">
@@ -104,13 +104,12 @@ import Line from "../components/Line.astro";
 	</section>
 
 	<!-- Nyhedsbrev -->
-	<section class="pb-6xl">
+	<section class="pb-6xl nyhedsbrev">
 		<Newsletter />
 	</section>
 
 	<!-- Gave sektion -->
-	<section>
-		<section class="grid md:grid-cols-2 border-small border-colors-blue-400">
+		<section class="grid md:grid-cols-2 border-small border-colors-blue-400 gave">
 			<img src="/gave.png" alt="gave" class="border-r-small border-colors-blue-400" />
 			<article class="flex flex-col px-sm md:px-2xl justify-center md:py-0 py-ml">
 				<h3 class="pb-xxs">Den perfekte gave til ølelskeren</h3>
@@ -120,7 +119,7 @@ import Line from "../components/Line.astro";
 				</div>
 			</article>
 		</section>
-	</section>
+	
 </MainLayout>
 
 <script type="text/javascript">
@@ -133,4 +132,45 @@ function parallax(event) {
 		shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
 	});
 }
+</script>
+<script>
+	import { inView } from "motion";
+
+	const maltclub = document.querySelector(".maltclub");
+
+	inView(maltclub, () => {
+		maltclub.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+	});
+
+	const hygge = document.querySelector(".hygge");
+
+	inView(hygge, () => {
+		hygge.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+	});
+
+	const abonnement = document.querySelector(".abonnement");
+
+	inView(abonnement, () => {
+		abonnement.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+	});
+
+	const tidligere = document.querySelector(".tidligere");
+
+	inView(tidligere, () => {
+		tidligere.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+	});
+
+	const nyhedsbrev = document.querySelector(".nyhedsbrev");
+
+	inView(nyhedsbrev, () => {
+		nyhedsbrev.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+	});
+
+	const gave = document.querySelector(".gave");
+
+	inView(gave, () => {
+		gave.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+	});
+
+
 </script>
