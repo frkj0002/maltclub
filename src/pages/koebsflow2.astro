@@ -89,16 +89,16 @@ import pakkeHvid from "../assets/images/pakke_hvid.svg";
 						<input type="checkbox" name="brug leveringsadresse" />
 						<label for="">Brug leveringsadresse som faktureringsadresse</label>
 					</form>
-					<div class="md:flex justify-center md:justify-between grid gap-y-sm py-sm">
-						<div class="md:order-last">
-							<a href="/koebsflow3"><Button variant="paymentCTA" size="long" class="">Betal nu</Button></a>
-						</div>
-						<div>
-							<a href="/koebsflow1"><Button variant="paymentBack" size="long" class="">Tilbage<span class="opacity-0 md:hidden">e</span></Button></a>
-						</div>
+					<div class="flex justify-center md:justify-end py-m">
+						<a href="/koebsflow3"><Button variant="paymentCTA" size="long" class="">Betal nu</Button></a>
 					</div>
 				</div>
-				<hr class="border-colors-blue-500 pt-s" />
+			</div>
+		</article>
+		<div class="flex justify-center md:justify-start py-m">
+			<a href="/koebsflow1"><Button variant="paymentBack" size="long" class="">Tilbage<span class="opacity-0 md:hidden">e</span></Button></a>
+		</div>
+		<hr class="border-colors-blue-500 pt-s" />
 				<!-- Links til betingelser -->
 				<div class="underline pb-sm px-s grid items-center">
 					<ul class="flex gap-x-s flex-col-2">
@@ -114,7 +114,5 @@ import pakkeHvid from "../assets/images/pakke_hvid.svg";
 						<li>Juridisk meddelelse</li>
 					</ul>
 				</div>
-			</div>
-		</article>
 	</section></MainLayout
 >
