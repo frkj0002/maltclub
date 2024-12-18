@@ -9,8 +9,8 @@ import Accordion from "../components/Accordion.astro";
 import Newsletter from "../components/Newsletter.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
-import left from "../assets/images/left.png";
-import right from "../assets/images/right.png";
+import left from "../assets/images/left4.png";
+import right from "../assets/images/right3.png";
 import pcBlue from "../assets/images/pc_blue.svg";
 import pakkeBlue from "../assets/images/pakke_blue.svg";
 import beerBlue from "../assets/images/beer_blue.svg";
@@ -22,14 +22,14 @@ import Line from "../components/Line.astro";
 
 <MainLayout title="Titel">
 	<section class="relative mouse_move grid md:grid-cols-2 justify-between border-b-small border-colors-blue-400">
-		<section class="text-center grid items-center justify-center w-screen md:w-auto">
+		<section class="text-center grid items-center justify-center">
 			<div class="grid mx-auto text-center">
-				<h1 class="pb-0">MaltClub</h1>
+				<h1>MaltClub</h1>
 				<h3 class="normal-case pb-lg">Din månedlige dosis af <br /> kvalitetsøl</h3>
 				<a href="/listview"><Button variant="primary" size="large">Køb abonnement</Button></a>
 			</div>
 		</section>
-		<section class="mouse_move relative w-full h-screen grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-contain bg-center" style="background-image: url('/hero_forside.png');">
+		<section class="mouse_move relative w-full h-[80vh] grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('/hero_forside4.webp');">
 			<Image src={left} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-1 left-[10%] translate-y-[-50%]" value="5" />
 			<Image src={right} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-2 right-[10%] translate-y-[-50%]" value="-5" />
 		</section>
@@ -82,7 +82,7 @@ import Line from "../components/Line.astro";
 	<section class="text-center pb-6xl">
 		<h2 class="text-center pb-sm">Abonnementer</h2>
 		<article class="md:grid grid-cols-4 mx-auto px-xxs pb-xl">
-			<Card cardimage="/beer_presentation_maisel2.png" cardimagehover="/MaltClubXL_beers.png" navn="Maltclub XL" antal="9-11" pris="465" />
+			<Card cardimage="/beer_presentation_maisel2.png" cardimagehover="/MaltClubXL_beers.png" navn="Maltclub XL" antal="9-11" pris="465" bestseller="true" />
 			<Card cardimage="/beer_presentation_enommer2.png" cardimagehover="/MaltClub_beers.png" navn="Maltclub" antal="5-6" pris="275" />
 			<Card cardimage="/beer_presentation_ebeltoft2.png" cardimagehover="/MaltClub_beers.png" navn="Maltclub uden IPA" antal="5-6" pris="275" />
 			<Card cardimage="/beer_presentation_rochefort2.png" cardimagehover="/gave.png" navn="Gaveabonnement" antal="5-6" pris="275" />
