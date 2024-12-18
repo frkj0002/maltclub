@@ -5,6 +5,7 @@ import Form from "../components/Form.astro";
 import { Image } from "astro:assets";
 import Line from "../components/Line.astro";
 import pcHvid from "../assets/images/pc_hvid.png";
+import pil from "../assets/images/back.svg";
 ---
 
 <MainLayout>
@@ -13,16 +14,17 @@ import pcHvid from "../assets/images/pc_hvid.png";
 		<div class="grid justify-center">
 			<Image src={pcHvid} alt="stregtegning af en pc, der bestiller abonnement" />
 		</div>
-		<h2 class=" text-colors-blue-500 py-s">Kontaktoplysninger og levering</h2>
+		<a href="/singleview"><Image src={pil} alt="pil tilbage" /></a>
+		<h2 class="text-colors-blue-500 py-s">Kontaktoplysninger og levering</h2>
 		<Form titel="E-mail" name="email" />
 		<form class="pb-sm" name="sendemails" data-netlify="true">
-			<input type="checkbox" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50 " />
+			<input type="checkbox" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50" />
 			<label for="privatlivspolitik" class="font-sans font-medium text-paragraphmobile md:text-paragraph text-colors-blue-500">Send mig e-mails med nyheder og tilbud</label>
 			<p class="text-colors-blue-500">Har du allerede en bruger, så log ind <a href="#" class="underline">her</a></p>
 		</form>
 		<div class="grid md:grid-cols-2 gap-xs">
-			<Form titel="Fornavn" name="fornavn"/>
-			<Form titel="Efternavn" name="efternavn"/>
+			<Form titel="Fornavn" name="fornavn" />
+			<Form titel="Efternavn" name="efternavn" />
 		</div>
 		<Form titel="Firma (valgfri)" name="firma" />
 		<Form titel="Adresse" name="adresse" variant="primary" class="relative">
@@ -41,11 +43,11 @@ import pcHvid from "../assets/images/pc_hvid.png";
 		<div class="">
 			<input type="checkbox" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50" />
 			<label for="privatlivspolitik" class="font-sans font-medium text-paragraphmobile md:text-paragraph text-colors-blue-500">Send mig e-mails med nyheder og tilbud</label>
-			<p class="text-colors-blue-500 ">Gem denne information for hurtigere udtjekning næste gang</p>
+			<p class="text-colors-blue-500">Gem denne information for hurtigere udtjekning næste gang</p>
 		</div>
 		<div class="md:flex justify-center md:justify-end grid pt-xs">
 			<div class="">
-				<a href="/koebsflow2"><Button variant="tertiary" size="long" >Næste<span class="opacity-0 md:hidden">e</span></Button></a>
+				<a href="/koebsflow2"><Button variant="tertiary" size="long">Næste<span class="opacity-0 md:hidden">e</span></Button></a>
 			</div>
 			<!-- <div>
 				<a href="/singleview"><Button variant="paymentBack" size="long" class="">tilbage</Button></a>
