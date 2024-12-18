@@ -4,6 +4,7 @@ import Form from "../components/Form.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import pakkeHvid from "../assets/images/pakke_hvid.svg";
+import pil from "../assets/images/back.svg";
 ---
 
 <!-- Betaling -->
@@ -12,6 +13,7 @@ import pakkeHvid from "../assets/images/pakke_hvid.svg";
 		<div class="grid justify-center">
 			<Image src={pakkeHvid} alt="stregtegning af computer" />
 		</div>
+		<a href="/koebsflow1"><Image src={pil} alt="pil tilbage" /></a>
 		<h2 class="text-colors-blue-500 pt-s">Betaling</h2>
 		<p class="text-colors-blue-500 pb-s">Alle transaktioner er sikre og krypterede</p>
 
