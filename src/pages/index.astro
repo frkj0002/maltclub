@@ -3,12 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import Smagsglimt from "../components/Smagsglimt.astro";
-import Link from "../components/Link.astro";
-import Form from "../components/Form.astro";
-import Accordion from "../components/Accordion.astro";
 import Newsletter from "../components/Newsletter.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 import left from "../assets/images/left4.png";
 import right from "../assets/images/right3.png";
 import pcBlue from "../assets/images/pc_blue.svg";
@@ -16,8 +12,7 @@ import pakkeBlue from "../assets/images/pakke_blue.svg";
 import beerBlue from "../assets/images/beer_blue.svg";
 import yellowArrow from "../assets/images/yellow_arrow.svg";
 import hygge from "../assets/images/hygge.webp";
-import hero from "../assets/images/hero.png";
-import Line from "../components/Line.astro";
+import Gave from "../assets/images/gave.png";
 ---
 
 <MainLayout title="Titel">
@@ -29,9 +24,9 @@ import Line from "../components/Line.astro";
 				<a href="/listview"><Button variant="primary" size="large">Køb abonnement</Button></a>
 			</div>
 		</section>
-		<section class="mouse_move relative w-full md:w-full h-[50vh] md:h-[85vh] grid md:grid-cols-2 overflow-x-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('/hero_forside4.webp');">
-			<Image src={left} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-1 left-[10%] translate-y-[-50%]" value="5" />
-			<Image src={right} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-2 right-[10%] translate-y-[-50%]" value="-5" />
+		<section class="mouse_move relative w-full md:w-full h-[50vh] md:h-[85vh] grid md:grid-cols-2 overflow-x-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('/hero_forside4.webp'); width:854.333px height:526.433px">
+			<Image src={left} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-1 left-[10%] translate-y-[-50%]" value="5" format="webp" />
+			<Image src={right} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-2 right-[10%] translate-y-[-50%]" value="-5" format="webp" />
 		</section>
 		<Image src={yellowArrow} alt="pil ned" class="absolute bottom-xs left-[40%] md:left-[47%] z-10 shake-vertical" />
 	</section>
@@ -70,7 +65,7 @@ import Line from "../components/Line.astro";
 
 	<!-- Øl er lig med hygge -->
 	<section class="grid md:grid-cols-2 border-small border-colors-blue-400 mb-6xl hygge">
-		<Image src={hygge} alt="hej" class="border-r-small border-colors-blue-400" />
+		<Image src={hygge} alt="hej" loading="lazy" class="border-r-small border-colors-blue-400" />
 		<article class="flex flex-col px-sm md:px-3xl justify-center md:py-0 py-ml">
 			<h3 class="pb-xxs">øl er lig med hygge</h3>
 			<p class="italic pb-sm">Del smagsoplevelsen med dem du holder af</p>
@@ -96,10 +91,10 @@ import Line from "../components/Line.astro";
 
 		<article class="md:grid md:grid-cols-5 border-b-small border-colors-blue-400 md:border-none">
 			<Smagsglimt cardimage="/mikeller.png" cardimagealt="christmas classic fra mikeller" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" bryggeri=" Mikeller" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
-			<Smagsglimt cardimage="/mad scientist.png" cardimagealt="wolf gang fra mad scientist" navn="MAD SCIENTIST WOLF GANG" type=" LAGER - IPL" bryggeri=" Mad Scientist" land=" Ungarn" alkoholprocent=" 6%" beskrivelse="Moderne lager fra det populære og ud-af-boksen tænkende ungarske bryghus Mad Scientist. Wolf Gang har en høj intensitet på humle samt en frisk orange-rød kulør. Ret anderledes og nytænkede lager sammenlignet med de traditionelle." />
-			<Smagsglimt cardimage="/electricity supply.png" cardimagealt="electricity supply board fra white hag og cloudwater" navn="ELECTRICITY SUPPLY BOARD" type=" BITTER ENGLISH ALE" bryggeri=" The white hag & Cloudwater" land=" Irland & England" alkoholprocent=" 6%" beskrivelse="Skønt samarbejde mellem irske The White Hag og engelske Cloudwater. En bitter english ale brygget i klassisk engelsk stil. Øllen har en brændt rød farve med et klar og cremet hvid skum. Smagen bærer noter af karamel og malt." />
-			<Smagsglimt cardimage="/hop bullet.png" cardimagealt="hop bullet fra sierra nevada" navn="SIERRA NEVADA HOP BULLET" type=" DOUBLE IPA" bryggeri=" Sierra Nevada" land=" USA" alkoholprocent=" 8%" beskrivelse="For første gang skal vi stifte bekendtskab med en Double IPA på 8%. På trods af sin relative høje alkoholprocent er Hop Bullet en ganske let drikkelig øl. Humle smagen og bitterheden fornemmes tydeligt i øllen." />
-			<Smagsglimt cardimage="/thunder juice.png" cardimagealt="apocalyptic thunder juice fra amundsen" navn="APOCALYPTIC THUNDER JUICE" type=" NEW ENGLAND IPA" bryggeri=" AMUNDSEN" land=" Norge" alkoholprocent=" 6,5%" beskrivelse="Tropisk sød frugtagtig smag med toner af ananas, appelsin, mango og melon med en bitter finish. Amundsen har brygget øllen med tanke på at i tilfælde af en apokalypse, ville dette være dit valg som en sidste øl - deraf den bizare etiket og ikke mindst navn på denne øl." />
+			<Smagsglimt cardimage="/mad scientist.png" cardimagealt="wolf gang fra mad scientist" navn="MAD SCIENTIST WOLF GANG" type=" LAGER - IPL" bryggeri=" Mad Scientist" land=" Ungarn" alkoholprocent=" 6%" beskrivelse="Wolf Gang har en høj intensitet på humle samt en frisk orange-rød kulør. Ret anderledes og nytænkede lager sammenlignet med de traditionelle." />
+			<Smagsglimt cardimage="/electricity supply.png" cardimagealt="electricity supply board fra white hag og cloudwater" navn="ELECTRICITY SUPPLY BOARD" type=" BITTER ENGLISH ALE" bryggeri=" The white hag & Cloudwater" land=" Irland & England" alkoholprocent=" 6%" beskrivelse="En bitter english ale. Øllen har en brændt rød farve med et klar og cremet hvid skum. Smagen bærer noter af karamel og malt." />
+			<Smagsglimt cardimage="/hop bullet.png" cardimagealt="hop bullet fra sierra nevada" navn="SIERRA NEVADA HOP BULLET" type=" DOUBLE IPA" bryggeri=" Sierra Nevada" land=" USA" alkoholprocent=" 8%" beskrivelse="På trods af sin relative høje alkoholprocent er Hop Bullet en ganske let drikkelig øl. Humle smagen og bitterheden fornemmes tydeligt i øllen." />
+			<Smagsglimt cardimage="/thunder juice.png" cardimagealt="apocalyptic thunder juice fra amundsen" navn="APOCALYPTIC THUNDER JUICE" type=" NEW ENGLAND IPA" bryggeri=" AMUNDSEN" land=" Norge" alkoholprocent=" 6,5%" beskrivelse="Tropisk sød frugtagtig smag med toner af ananas, appelsin, mango og melon med en bitter finish." />
 		</article>
 	</section>
 
@@ -110,7 +105,7 @@ import Line from "../components/Line.astro";
 
 	<!-- Gave sektion -->
 		<section class="grid md:grid-cols-2 border-small border-colors-blue-400 gave">
-			<img src="/gave.png" alt="gave" class="border-r-small border-colors-blue-400" />
+			<Image src={Gave} format="webp" loading="lazy" alt="gaveabonnement" class="border-r-small border-colors-blue-400"/>
 			<article class="flex flex-col px-sm md:px-2xl justify-center md:py-0 py-ml">
 				<h3 class="pb-xxs">Den perfekte gave til ølelskeren</h3>
 				<p class="pb-lg">Overrask ølelskeren i dit liv med et gaveabonnement på vores ølkasser. Du bestemmer selv, hvor mange måneder modtageren skal forkæles med spændende, håndplukkede øl. Når perioden er slut, stopper abonnementet automatisk, så det er en gave uden besvær. Med MaltClub får modtageren ikke bare øl - de får en oplevelse, en smagsrejse og noget at glæde sig til hver måned. Ingen binding, ingen bekymringer - bare ren øl-lykke!</p>

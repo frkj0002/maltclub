@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
-import hero from "../assets/images/singleview_hero.png";
 import Line from "../components/Line.astro";
 import Accordion from "../components/Accordion.astro";
 import left from "../assets/images/left4.png";
@@ -12,9 +11,9 @@ import right from "../assets/images/right3.png";
 <MainLayout>
 	<section class="grid md:grid-cols-2 border-t-small border-colors-blue-400">
 		<h2 class="text-center pt-s md:hidden">MaltClub XL</h2>
-		<article class="md:mouse_move relative w-full min-h-[60vh] grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-contain bg-center border-b-small border-colors-blue-400 pb-0" style="background-image: url('/MaltClubXL_beers.png');">
-			<Image src={left} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-1 left-[10%] translate-y-[-10%]" value="5" />
-			<Image src={right} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-2 right-[10%] translate-y-[-10%]" value="-5" />
+		<article class="md:mouse_move relative w-full min-h-[60vh] grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-contain bg-center border-b-small border-colors-blue-400 pb-0" style="background-image: url('/MaltClubXL_beers.png'); width:855.667px height:806px">
+			<Image src={left} alt="malt og humle" format="webp" loading="lazy" class="hidden md:block mouse absolute md:col-start-1 left-[10%] translate-y-[-10%]" value="5" />
+			<Image src={right} alt="malt og humle" format="webp" loading="lazy" class="hidden md:block mouse absolute md:col-start-2 right-[10%] translate-y-[-10%]" value="-5" />
 		</article>
 		<article class="grid gap-xxs px-sm md:px-3xl py-lg pt-0 md:py-6xl md:border-l-small border-colors-blue-400">
 			<h2 class="hidden md:block">MaltClub XL</h2>
