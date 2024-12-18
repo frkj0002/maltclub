@@ -7,7 +7,7 @@ import Button from "./Button.astro";
 <article class="@container border-small border-colors-blue-400">
 	<a href="/singleview" class="flex flex-col">
 		<section class="relative pt-sm text-center">
-			{(bestseller === "true") && <div class="absolute -rotate-45 bg-colors-green-500 px-s [clip-path:polygon(20%_0%,80%_0%,100%_100%,0_100%)] top-[1.35rem] left-[-1.7rem] font-sans text-colors-blue-500">Bestseller</div>}
+			{(bestseller === "true") && <div class="absolute -rotate-45 bg-colors-green-500 px-s [clip-path:polygon(20%_0%,80%_0%,100%_100%,0_100%)] top-[1.35rem] left-[-1.7rem] font-sans text-colors-blue-500 font-semibold">Bestseller</div>}
 			<h3 class="text-center pb-xs">{navn}</h3>
 			<p class="text-center pb-xxs"><span>{antal}</span><span> øl om måneden</span></p>
 			<p class="text-center pb-s"><span>{pris}</span><span> kr.</span></p>
