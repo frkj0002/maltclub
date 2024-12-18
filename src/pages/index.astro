@@ -21,25 +21,25 @@ import Line from "../components/Line.astro";
 ---
 
 <MainLayout title="Titel">
-	<section class="relative mouse_move grid md:grid-cols-2 justify-between border-b-small border-colors-blue-400">
-		<section class="text-center grid items-center justify-center">
-			<div class="grid mx-auto text-center">
+	<section class="relative mouse_move md:grid md:grid-cols-2 justify-between border-b-small border-colors-blue-400">
+		<section class="text-center md:grid items-center">
+			<div class="md:grid text-center items-center">
 				<h1>MaltClub</h1>
 				<h3 class="normal-case pb-lg">Din månedlige dosis af <br /> kvalitetsøl</h3>
 				<a href="/listview"><Button variant="primary" size="large">Køb abonnement</Button></a>
 			</div>
 		</section>
-		<section class="mouse_move relative w-full h-[80vh] grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('/hero_forside4.webp');">
+		<section class="mouse_move relative w-full md:w-full h-[50vh] md:h-[85vh] grid md:grid-cols-2 overflow-x-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('/hero_forside4.webp');">
 			<Image src={left} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-1 left-[10%] translate-y-[-50%]" value="5" />
 			<Image src={right} alt="malt og humle" class="hidden md:block mouse absolute md:col-start-2 right-[10%] translate-y-[-50%]" value="-5" />
 		</section>
-		<Image src={yellowArrow} alt="pil ned" class="absolute bottom-xs left-1/2 translate-x-[-50%] z-10 shake-vertical" />
+		<Image src={yellowArrow} alt="pil ned" class="absolute bottom-xs left-[40%] md:left-[47%] z-10 shake-vertical" />
 	</section>
 
 	<!-- Hvad er MaltClub -->
 	<section class="pt-3xl">
 		<article class="flex flex-col items-center">
-			<div class="w-full max-w-3xl">
+			<div class="w-full max-w-3xl px-s md:px-0">
 				<h2 class="pb-sm text-left">Hvad er MaltClub</h2>
 				<p class="pb-3xl text-left">MaltClub er for dig, der elsker øl med karakter og historie. Hver måned sammensætter vi en kasse med nøje udvalgte specialøl fra danske og udenlandske bryggerier, alle ledsaget af inspirerende fortællinger om bryghusene bag. Vi leverer direkte til din dør eller pakkeshop, så du kan udforske nye smagsoplevelser og dele dem med venner og familie. Fra kun 275 kr. om måneden får du kvalitetsøl, der udvider din ølhorisont - én kasse ad gangen.</p>
 			</div>
@@ -94,7 +94,7 @@ import Line from "../components/Line.astro";
 	<section class="text-center px-s pb-6xl">
 		<h2 class="pb-sm">Smagsglimt fra tidligere kasser</h2>
 
-		<article class="md:grid md:grid-cols-5">
+		<article class="md:grid md:grid-cols-5 border-b-small border-colors-blue-400 md:border-none">
 			<Smagsglimt cardimage="/mikeller.png" cardimagealt="christmas classic fra mikeller" navn="MIKELLER XMAS CLASSIC" type=" VIENNA LAGER" bryggeri=" Mikeller" land=" Danmark" alkoholprocent=" 5,6%" beskrivelse="Xmas Classic er Mikkellers hyldest til den mest almindelige øltype i Danmark - Vienna Lager. En skøn let humlet pilsner som er let drikkelig." />
 			<Smagsglimt cardimage="/mad scientist.png" cardimagealt="wolf gang fra mad scientist" navn="MAD SCIENTIST WOLF GANG" type=" LAGER - IPL" bryggeri=" Mad Scientist" land=" Ungarn" alkoholprocent=" 6%" beskrivelse="Moderne lager fra det populære og ud-af-boksen tænkende ungarske bryghus Mad Scientist. Wolf Gang har en høj intensitet på humle samt en frisk orange-rød kulør. Ret anderledes og nytænkede lager sammenlignet med de traditionelle." />
 			<Smagsglimt cardimage="/electricity supply.png" cardimagealt="electricity supply board fra white hag og cloudwater" navn="ELECTRICITY SUPPLY BOARD" type=" BITTER ENGLISH ALE" bryggeri=" The white hag & Cloudwater" land=" Irland & England" alkoholprocent=" 6%" beskrivelse="Skønt samarbejde mellem irske The White Hag og engelske Cloudwater. En bitter english ale brygget i klassisk engelsk stil. Øllen har en brændt rød farve med et klar og cremet hvid skum. Smagen bærer noter af karamel og malt." />
