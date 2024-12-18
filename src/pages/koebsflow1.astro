@@ -14,15 +14,15 @@ import pcHvid from "../assets/images/pc_hvid.png";
 			<Image src={pcHvid} alt="stregtegning af en pc, der bestiller abonnement" />
 		</div>
 		<h2 class=" text-colors-blue-500 py-s">Kontaktoplysninger og levering</h2>
-		<Form titel="E-mail" name="email" />
+		<Form titel="E-mail" name="email" value="email" />
 		<form class="pb-sm" name="sendemails">
 			<input type="checkbox" id="sendEmails" name="sendEmails" value="sendEmails" class="appearance-none rounded-none bg-colors-green-50 " />
 			<label for="privatlivspolitik" class="font-sans font-medium text-paragraphmobile md:text-paragraph text-colors-blue-500">Send mig e-mails med nyheder og tilbud</label>
 			<p class="text-colors-blue-500">Har du allerede en bruger, så log ind <a href="#" class="underline">her</a></p>
 		</form>
 		<div class="grid md:grid-cols-2 gap-xs">
-			<Form titel="Fornavn" name="fornavn"/>
-			<Form titel="Efternavn" name="efternavn" />
+			<Form titel="Fornavn" name="fornavn" value="fornavn"/>
+			<Form titel="Efternavn" name="efternavn" value="efternavn"/>
 		</div>
 		<Form titel="Firma (valgfri)" />
 		<Form titel="Adresse" variant="primary" class="relative">
