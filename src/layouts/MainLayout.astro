@@ -10,21 +10,21 @@ const { title } = Astro.props;
 	<head>
 		<meta name="robots" content="noindex,nofollow" />
 		<meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Bagel+Fat+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
 		<title>{Astro.props.title}</title>
-    <meta name="description" content={Astro.props.description} />
-    <meta property="og:locale" content="da_DK" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={Astro.props.ogtitle} />
-    <meta property="og:description" content={Astro.props.ogdescription} />
+		<meta name="description" content={Astro.props.description} />
+		<meta property="og:locale" content="da_DK" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={Astro.props.ogtitle} />
+		<meta property="og:description" content={Astro.props.ogdescription} />
 	</head>
 	<body class="bg-colors-blue-500" title={title}>
 		<header>
@@ -33,6 +33,53 @@ const { title } = Astro.props;
 
 		<main>
 			<slot />
+			<!-- CREDITS -->
+			<!-- 
+Stone tangerine
+https://www.abbysirishpub.com/items/stone-tangerine-express-hazy-ipa
+
+Maisel and friends
+https://www.honest-rare.de/en/maisel-and-friends-hell/
+
+Porterhouse Oyster
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unabirra.com%2Fprodotto%2Fporterhouse-oyster-stout-bott-05cl%2F&psig=AOvVaw3O-HOUbJE_86ejXyPK7Pps&ust=1733478811727000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDJ__mtkIoDFQAAAAAdAAAAABBD
+
+Pan ipani
+https://www.beertasting.com/en/beers/trzech-kumpli-pan-ipani
+
+Trappistes rochefort
+https://www.bevco.dk/rochefort-triple-extra-trappistoel/53097
+
+Ebeltoft Gårdbryggeri - Belgian Brown
+https://www.loegismose.dk/produkter/ebeltoft-belgian-brown-ale-68--33cl/82666/
+
+Åben
+https://webshop.aabenbryg.dk/products/stolen-red-berries-1
+
+Siren - varvar
+https://shop.sherbrookeliquor.com/products/siren-mavka-440-ml?_pos=1&_sid=ca45c6965&_ss=r&variant=39415917707401
+
+Flying couch - yuzu raspberry
+https://beerdeal.dk/vare/flying-couch-double-yuzu-raspberry/
+
+En ommer fra frederikshavn bryghus
+https://oby.dk/produkt/en-ommer-fra-frederikshavn-bryghus/  
+
+Mikkeller xmas classic
+https://www.winefamly.com/mikkeller-iskold-xmas-classic
+
+The White hag and Cloudwater, electricity supply board
+https://www.beertasting.com/en/beers/white-hag-electricity-supply-board
+
+Mad scientist, wolf gang
+https://www.burgbieren.nl/mad-scientist/mad-scientist-wolf-gang-blik/
+
+Åben, cloudless
+https://mikrobryggerier.dk/vare/cloudscape-west-coast-dipa-aaben/
+
+Amundsen, Apocalyptic Thunder Juice
+https://www.chas-e.dk/wp-content/uploads/apocalyptic-thunder-juice.png
+-->
 		</main>
 
 		<footer>
