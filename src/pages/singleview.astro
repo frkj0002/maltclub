@@ -6,9 +6,11 @@ import Line from "../components/Line.astro";
 import Accordion from "../components/Accordion.astro";
 import left from "../assets/images/left4.png";
 import right from "../assets/images/right3.png";
+import yellowArrow from "../assets/images/yellow_arrow.svg";
 ---
 
 <MainLayout title="MaltClubXL" description="MaltClub XL abonnement er for den garvede ølentusiast, som ikke kan få nok af lækker kvalitetsøl, hygge og samvær. Modtag 9-11 øl om måneden og del smagsoplevelsen med dem du holder af." ogtitle="MaltClub XL - til dig, der ikke kan få nok af lækker kvalitetsøl" ogdescription="Med et MaltClub XL abonnement modtager du 9-11 øl om måneden, som du kan nyde for dig selv, eller dele med dem, du holder af.">
+	<a href="/listview"><Image src={yellowArrow} alt="pil ned" class="absolute top-2xl md:top-5xl left-[0%] md:left-[0%] z-10 rotate-90" /></a>
 	<section class="grid md:grid-cols-2 border-t-small border-colors-blue-400">
 		<h2 class="text-center pt-s md:hidden">MaltClub XL</h2>
 		<article class="md:mouse_move relative w-full min-h-[60vh] grid grid-cols-2 overflow-x-hidden bg-no-repeat bg-contain bg-center border-b-small border-colors-blue-400 pb-0" style="background-image: url('/MaltClubXL_beers.png'); width:855.667px height:806px">
