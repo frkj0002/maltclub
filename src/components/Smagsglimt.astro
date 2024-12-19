@@ -7,7 +7,7 @@ import Button from "./Button.astro";
 	<article  class="pt-sm text-center relative border-y-small border-x-0 border-l-small border-colors-blue-400 cursor-pointer"  
 	@click="showOverlay = true">
 		<div >
-			<h3 class="text-center pb-xs px-m">{navn}</h3>
+			<h4 class="text-center pb-xs px-m">{navn}</h4>
 			<p class="text-center pb-xxs"><span>TYPE:</span><span>{type}</span></p>
 			<div class="mt-sm">
 				<Button variant="secondary" size="small" class="place-content-center">om øllen</Button>
@@ -18,7 +18,7 @@ import Button from "./Button.astro";
 
 	<article  x-show="showOverlay" x-transition class="absolute inset-0 pt-sm text-center bg-colors-blue-400 h-full">
 		<div class="px-m">
-			<h3 class="text-center pb-xs">{navn}</h3>
+			<h4 class="text-center pb-xs">{navn}</h4>
 			<p class="text-center pb-s"><span>TYPE:</span><span>{type}</span></p>
 			<p class="text-left pb-xxs"><span>Bryggeri:</span><span>{bryggeri}</span></p>
 			<p class="text-left pb-xxs"><span>Land:</span><span>{land}</span></p>
