@@ -3,7 +3,7 @@ const { cardimage = "", cardimagealt = "", navn = "", antal = "", pris = "", car
 import Button from "./Button.astro";
 ---
 
-<article class="@container border-small border-colors-blue-400">
+<article class="@container border-y-small border-x-0 border-l-small border-colors-blue-400">
 	<a href="/singleview" class="flex flex-col">
 		<section class="relative pt-sm text-center">
 			{(bestseller === "true") && <div class="absolute -rotate-45 bg-colors-green-500 px-s [clip-path:polygon(20%_0%,80%_0%,100%_100%,0_100%)] top-[1.35rem] left-[-1.7rem] font-sans text-colors-blue-500 font-semibold">Bestseller</div>}
